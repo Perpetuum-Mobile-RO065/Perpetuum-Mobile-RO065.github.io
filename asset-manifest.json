@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/perpetuum-mobile-ro065.github.io/static/css/main.073c9b0a.css",
+    "main.js": "/perpetuum-mobile-ro065.github.io/static/js/main.d2e9fdb3.js",
+    "static/js/787.8e13e92d.chunk.js": "/perpetuum-mobile-ro065.github.io/static/js/787.8e13e92d.chunk.js",
+    "static/media/logo.svg": "/perpetuum-mobile-ro065.github.io/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/perpetuum-mobile-ro065.github.io/index.html",
+    "main.073c9b0a.css.map": "/perpetuum-mobile-ro065.github.io/static/css/main.073c9b0a.css.map",
+    "main.d2e9fdb3.js.map": "/perpetuum-mobile-ro065.github.io/static/js/main.d2e9fdb3.js.map",
+    "787.8e13e92d.chunk.js.map": "/perpetuum-mobile-ro065.github.io/static/js/787.8e13e92d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.d2e9fdb3.js"
+  ]
+}
