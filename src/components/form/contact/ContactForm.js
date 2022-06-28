@@ -1,41 +1,36 @@
-import React from "react";
-import {useState} from "react";
-import {useNavigate} from "react-router-dom";
-import emailjs from "@emailjs/browser";
+import React, {useMemo} from "react";
+import useEmail from "../../../hooks/email/useEmail";
+import {Form, Formik} from "formik";
+import * as Yup from "yup";
+import Fieldset from "../fields/Fieldset";
+import {Persist} from "formik-persist";
 
 export default function ContactForm() {
-    const [formData, setFormData] = useState({user_name: "", user_email: "", message: ""})
-    const navigate = useNavigate();
+    const email = useEmail("service_l7t2lx8", "template_c5tmjct", "dI2BMnbadqeZgm_Pr");
 
-    const formChange = (event) => {
-        const {value, name} = event.target;
-        setFormData(prevState => {
-            return {...prevState, [name]: value};
-        })
-    }
-
-    const sendFakeEmail = (event) => {
-        event.preventDefault();
-        setTimeout(() => navigate("../success", {replace: true, state: {email: formData.user_email, type: "contact"}}), 1000);
-    }
-
-    const sendEmail = (event) => {
-        event.preventDefault();
-        emailjs.send("service_nm6x8na", "template_owcu8ll", formData, "CS8FmbKAqyI6-414J")
-            .then(value => {
-                navigate("../success", {replace: true, state: formData})
-            }, error => console.log(error.text))
-    }
+    const formSchema = useMemo(() => {
+        return Yup.object({
+            userName: Yup.string().required("Name is required"),
+            email: Yup.string().email("Email is invalid").required("Email is required"),
+            message: Yup.string().required("Message is required").max(1000, "Message must be less than 1000 characters"),
+            title: Yup.string().required("Title is required"),
+        });
+    }, []);
 
     return (
-        <form onSubmit={sendFakeEmail}>
-            <label>Name</label>
-            <input type="text" name="user_name" onChange={formChange} value={formData.user_name}/>
-            <label>Email</label>
-            <input type="email" name="user_email" onChange={formChange} value={formData.user_email}/>
-            <label>Message</label>
-            <textarea name="message" onChange={formChange} value={formData.message}/>
-            <input type="submit" value="Send"/>
-        </form>
+        <Formik initialValues={{userName: "", email: "", message: "", title: ""}} validationSchema={formSchema}
+                onSubmit={(values) => {
+                    email(values);
+                }
+                }>
+            {({isSubmitting,}) => <Form>
+                <Fieldset label="Name" name="userName" type="text" placeholder="John Doe"/>
+                <Fieldset label="Email" name="email" type="email" placeholder="email@example.com"/>
+                <Fieldset label="Title" name="title" type="text" placeholder="Title"/>
+                <Fieldset label="Message" name="message" as="textarea" placeholder="Message"/>
+                <button type="submit" disabled={isSubmitting}>Submit</button>
+                <Persist name={"contact-form"} isSessionStorage={true}/>
+            </Form>}
+        </Formik>
     )
 }
