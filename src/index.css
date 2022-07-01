@@ -1,7 +1,12 @@
 body {
     margin: 0;
-    font-family: sans-serif;
+    font-family: 'Trispace', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background: rgb(2, 8, 5);
 }
 
+@font-face {
+    font-family: Quantum;
+    src: local(Quantum), url(./assets/fonts/Quantum.ttf) format('truetype');
+}
