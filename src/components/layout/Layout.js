@@ -1,25 +1,50 @@
 import React from "react";
 import {NavLink, Outlet} from "react-router-dom";
+import './Layout.css';
 
 export default function Layout() {
+    const activeStyle = {
+        textDecoration: "underline",
+    }
+
     return (
         <>
             <nav className="navigation--bar">
-                <ul className="navigation--links">
-                    <li className="nagivation--link"><NavLink to={"/"} end>Acasa</NavLink></li>
-                    <li className="nagivation--link"><NavLink to={"/echipa"}>Echipa noastra</NavLink></li>
-                    <li className="nagivation--link"><NavLink to={"/sponsori"}>Sponsorii nostri</NavLink></li>
-                    <li className="nagivation--link"><NavLink to={"/voluntariat"}>Alatura-te echipei</NavLink></li>
-                    <li className="nagivation--link"><NavLink to={"/contact"}>Contact</NavLink></li>
-                </ul>
+                <div className="logo">
+                    <NavLink to={"/"} end><img src="/logo.png" alt="Perpetuum Mobile Logo" className="logo"/></NavLink>
+                </div>
+                <div className="navigation--links">
+                    <NavLink to={"/"} end className="navigation--link"
+                             style={({isActive}) => isActive ? activeStyle : undefined}>Acasă</NavLink>
+                    <NavLink to={"/echipa"} className="navigation--link"
+                             style={({isActive}) => isActive ? activeStyle : undefined}>Echipa noastră</NavLink>
+                    <NavLink to={"/sponsori"} className="navigation--link"
+                             style={({isActive}) => isActive ? activeStyle : undefined}>Sponsori</NavLink>
+                    <NavLink to={"/voluntariat"} className="navigation--link"
+                             style={({isActive}) => isActive ? activeStyle : undefined}>Alătură-te echipei!</NavLink>
+                    <NavLink to={"/contact"} className="navigation--link"
+                             style={({isActive}) => isActive ? activeStyle : undefined}>Contact</NavLink>
+                </div>
             </nav>
             <Outlet/>
-            <footer>
-                {
-                    /*
-                    Imagini cu github patreon etc
-                     */
-                }
+            <footer className="footer">
+                <div className="social--links">
+                    <a href="https://github.com/Perpetuum-Mobile-RO065" target="_blank" className="social--link" rel="noreferrer">
+                        <img className="git--icon icon" src="/icons/github-logo.png" alt="Github social link"/>
+                    </a>
+                    <a href="https://www.instagram.com/perpetuummobileftc/" target="_blank" className="social--link" rel="noreferrer">
+                        <img className="insta--icon icon" src="/icons/instagram-logo.png" alt="Instagram social link"/>
+                    </a>
+                    <a href="https://discord.gg/8CPhWQCHhY" target="_blank" className="social--link" rel="noreferrer">
+                        <img className="dis--icon icon" src="/icons/discord-logo.png" alt="Discord social link"/>
+                    </a>
+                    <a href="https://www.facebook.com/perpetuummobilefirsttech/" target="_blank" className="social--link" rel="noreferrer">
+                        <img className="fb--icon icon" src="/icons/facebook-logo.png" alt="Facebook social link"/>
+                    </a>
+                </div>
+                <p className="copyright">Copyright© 2022 Perpetuum Mobile. Toate drepturile rezervate. Made with 🖤 by
+                    Alex David and
+                    Alexandra Moroz.</p>
             </footer>
         </>
 
