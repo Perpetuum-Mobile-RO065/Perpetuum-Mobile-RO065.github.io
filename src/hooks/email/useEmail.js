@@ -8,6 +8,7 @@ export default function useEmail(serviceID, templateID, publicKey) {
         emailjs.send(serviceID, templateID, formData, publicKey)
             .then(() => {
                 navigate("../success", {replace: true, state: {email: formData.email}})
-            }, error => console.log(error.text))
+            }, e => navigate("../error", {replace: true, state: {error: e.text}})
+            );
     }
 }
