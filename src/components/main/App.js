@@ -1,12 +1,13 @@
 import React from "react"
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import FormConfirmation from "../form/FormConfirmation";
+import FormConfirmation from "../form/redirect/FormConfirmation";
 import Layout from "../layout/Layout";
 import Home from "../home/Home";
 import Team from "../team/Team";
 import Sponsors from "../sponsors/Sponsors";
 import VolunteeringForm from "../form/volunteering/VolunteeringForm";
 import ContactForm from "../form/contact/ContactForm";
+import FormFailure from "../form/redirect/FormFailure";
 
 
 export default function App() {
@@ -24,6 +25,7 @@ export default function App() {
                     <Route path="/contact">
                         <Route index element={<ContactForm/>}/>
                         <Route path="success" element={<FormConfirmation/>}/>
+                        <Route path="error" element={<FormFailure/>}/>
                     </Route>
                 </Route>
             </Routes>
