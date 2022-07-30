@@ -1,9 +1,10 @@
 .divider {
-    height: 3px;
+    height: 5px;
     border: 0;
-    background-color: darkseagreen;
+    background-color: rgba(169, 204, 141, 0.7);
     width: available;
     margin: 0;
+    border-radius: 5px;
 }
 
 .form {
@@ -18,9 +19,9 @@
     width: 60%;
     margin: 4rem auto;
     vertical-align: center;
-    background: rgba(143, 188, 143, 0.55);
+    background: rgba(100, 164, 70, 0.75);
     border-radius: 10px;
-    border: 10px solid rgba(83, 162, 100, 0.7);
+    border: 10px solid rgba(26, 105, 66, 0.9);
     font-family: 'Trispace', sans-serif;
     display: flex;
     height: 35rem;
@@ -73,19 +74,19 @@
 .submit {
     border-radius: 15px;
     background-color: rgb(26, 105, 66);
-    color: darkseagreen;
+    color: rgb(169, 204, 141);;
     font-family: inherit;
     font-weight: inherit;
     font-size: 1.5em;
     height: fit-content;
-    border: 2px solid darkseagreen;
+    border: 2px solid rgb(169, 204, 141);
     padding: 0.6rem;
     margin: auto;
     cursor: pointer;
 }
 
 .input-box {
-    background-color: darkseagreen;
+    background: rgb(169, 204, 141);
     border: 2px solid rgb(33, 33, 33);
     border-radius: 5px;
 
@@ -98,6 +99,19 @@
     font-family: 'Trispace', sans-serif;
     font-size: 0.9em;
     overflow-x: hidden;
+}
+
+.input-box::placeholder {
+    color: rgba(26, 105, 66, 0.9);
+    opacity: 1; /* Firefox */
+}
+
+.input-box:-ms-input-placeholder{
+    color: rgba(26, 105, 66, 0.9);
+}
+
+.input-box::-ms-input-placeholder {
+    color: rgba(26, 105, 66, 0.9);
 }
 
 .input-label {
@@ -114,7 +128,7 @@
 }
 
 .maps-link {
-    color: darkseagreen;
+    color: rgba(169, 204, 141);
     text-decoration: none;
     margin: 0 0 0 5px;
 }

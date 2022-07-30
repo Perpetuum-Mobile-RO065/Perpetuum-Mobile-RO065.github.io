@@ -3,7 +3,7 @@ body {
     font-family: 'Trispace', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: rgb(2, 8, 5);
+    background: rgb(33, 33, 33);
 }
 
 @font-face {

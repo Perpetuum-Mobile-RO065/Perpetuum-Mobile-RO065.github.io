@@ -4,7 +4,8 @@ import './Layout.css';
 
 export default function Layout() {
     const activeStyle = {
-        textDecoration: "underline",
+        color: "rgb(169, 204, 141)",
+        textShadow: "-1.5px 1.5px 0 rgb(26, 105, 66), 1.5px 1.5px 0 rgb(26, 105, 66), 1.5px -1.5px 0 rgb(26, 105, 66), -1.5px -1.5px 0 rgb(26, 105, 66)",
     }
 
     return (
