@@ -43,7 +43,7 @@ export default function Layout() {
                         <img className="fb--icon icon" src="/icons/facebook-logo.png" alt="Facebook social link"/>
                     </a>
                 </div>
-                <p className="copyright">Copyright© 2022 Perpetuum Mobile. Toate drepturile rezervate. Made with 🖤 by
+                <p className="copyright">Copyright&copy; 2022 Perpetuum Mobile. Toate drepturile rezervate. Made with 🖤 by
                     Alex David and
                     Alexandra Moroz.</p>
             </footer>

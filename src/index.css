@@ -10,3 +10,13 @@ body {
     font-family: Quantum;
     src: local(Quantum), url(./assets/fonts/Quantum.ttf) format('truetype');
 }
+
+::-moz-selection { /* Code for Firefox */
+    color: darkseagreen;
+    background: rgb(26, 105, 66);
+}
+
+::selection {
+    color: darkseagreen;
+    background: rgb(26, 105, 66);
+}

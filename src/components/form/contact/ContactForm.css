@@ -137,16 +137,6 @@
     text-decoration: underline;
 }
 
-::-moz-selection { /* Code for Firefox */
-    color: darkseagreen;
-    background: rgb(26, 105, 66);
-}
-
-::selection {
-    color: darkseagreen;
-    background: rgb(26, 105, 66);
-}
-
 .message {
     height: 9rem;
     word-wrap: normal;
