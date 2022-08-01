@@ -1,4 +1,4 @@
-.divider {
+.contact-divider {
     height: 5px;
     border: 0;
     background-color: rgba(169, 204, 141, 0.7);
@@ -7,7 +7,7 @@
     border-radius: 5px;
 }
 
-.form {
+.contact-form {
     margin: 2rem;
     display: flex;
     flex-direction: column;
@@ -15,7 +15,7 @@
     width: 125%;
 }
 
-.form-template {
+.contact-form-template {
     width: 60%;
     margin: 4rem auto;
     vertical-align: center;
@@ -28,14 +28,14 @@
     font-weight: bold;
 }
 
-.contact-info {
+.contact-contact-info {
     color: rgb(33, 33, 33);
     margin: 2rem;
     display: flex;
     flex-direction: column;
 }
 
-.email_icon {
+.contact-email_icon {
     width: 6%;
     height: 6%;
     margin: 6px 8px 0 0;
@@ -43,13 +43,13 @@
     float: left;
 }
 
-.email_section {
+.contact-email_section {
     display: flex;
     margin: 0;
     padding: 0;
 }
 
-.location_icon {
+.contact-location_icon {
     width: 5.5%;
     height: 5.5%;
     margin: 11px 8px 0 0;
@@ -57,21 +57,21 @@
     float: left;
 }
 
-.margin-5px {
+.contact-margin-5px {
     margin: 5px;
 }
 
-.two-buttons {
+.contact-send {
     display: flex;
     margin: 0;
 }
 
-.form_text {
+.contact-form_text {
     margin: auto;
     height: fit-content;
 }
 
-.submit {
+.contact-submit {
     border-radius: 15px;
     background-color: rgb(26, 105, 66);
     color: rgb(169, 204, 141);;
@@ -85,7 +85,7 @@
     cursor: pointer;
 }
 
-.input-box {
+.contact-input-box {
     background: rgb(169, 204, 141);
     border: 2px solid rgb(33, 33, 33);
     border-radius: 5px;
@@ -101,25 +101,25 @@
     overflow-x: hidden;
 }
 
-.input-box::placeholder {
+.contact-input-box::placeholder {
     color: rgba(26, 105, 66, 0.9);
     opacity: 1; /* Firefox */
 }
 
-.input-box:-ms-input-placeholder{
+.contact-input-box:-ms-input-placeholder{
     color: rgba(26, 105, 66, 0.9);
 }
 
-.input-box::-ms-input-placeholder {
+.contact-input-box::-ms-input-placeholder {
     color: rgba(26, 105, 66, 0.9);
 }
 
-.input-label {
+.contact-input-label {
     font-weight: bold;
     color: #222222;
 }
 
-.input-box:focus {
+.contact-input-box:focus {
     outline: none !important;
     box-shadow: -2px 2px 0 rgb(26, 105, 66),
     2px 2px 0 rgb(26, 105, 66),
@@ -127,17 +127,17 @@
     -2px -2px 0 rgb(26, 105, 66);
 }
 
-.maps-link {
+.contact-maps-link {
     color: rgba(169, 204, 141);
     text-decoration: none;
     margin: 0 0 0 5px;
 }
 
-.maps-link:hover {
+.contact-maps-link:hover {
     text-decoration: underline;
 }
 
-.message {
+.contact-message {
     height: 9rem;
     word-wrap: normal;
     resize: none;
