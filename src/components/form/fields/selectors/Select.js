@@ -2,7 +2,7 @@ import React from "react";
 import {useField} from "formik";
 import '../Fieldset.css';
 
-export default function Radio({label, divClass, inputClass, labelClass, ...props}) {
+export default function Select({label, divClass, inputClass, labelClass, ...props}) {
     const [field, meta] = useField(props);
     return (
         <div className={divClass}>
