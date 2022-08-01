@@ -1,0 +1,19 @@
+.announcement {
+    width: 60%;
+    background: rgba(100, 164, 70, 0.75);
+    border-radius: 10px;
+    border: 10px solid rgba(26, 105, 66, 0.9);
+    font-family: 'Trispace', sans-serif;
+    display: flex;
+    font-weight: bold;
+    flex-direction: column;
+    height: available;
+    position: relative;
+}
+
+.unknown-page {
+    min-height: 75.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

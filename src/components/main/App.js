@@ -8,6 +8,7 @@ import Sponsors from "../sponsors/Sponsors";
 import VolunteeringForm from "../form/volunteering/VolunteeringForm";
 import ContactForm from "../form/contact/ContactForm";
 import FormFailure from "../form/redirect/FormFailure";
+import UnknownPage from "../home/UnknownPage";
 
 
 export default function App() {
@@ -27,6 +28,7 @@ export default function App() {
                         <Route path="success" element={<FormConfirmation/>}/>
                         <Route path="error" element={<FormFailure/>}/>
                     </Route>
+                    <Route path="*" element={<UnknownPage/>}/>
                 </Route>
             </Routes>
         </BrowserRouter>
