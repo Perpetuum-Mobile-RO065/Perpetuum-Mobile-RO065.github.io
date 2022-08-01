@@ -27,23 +27,29 @@ export default function Layout() {
                              style={({isActive}) => isActive ? activeStyle : undefined}>Contact</NavLink>
                 </div>
             </nav>
-            <Outlet/>
+            <div className="main-body">
+                <Outlet/>
+            </div>
             <footer className="footer">
                 <div className="social--links">
-                    <a href="https://github.com/Perpetuum-Mobile-RO065" target="_blank" className="social--link" rel="noreferrer">
+                    <a href="https://github.com/Perpetuum-Mobile-RO065" target="_blank" className="social--link"
+                       rel="noreferrer">
                         <img className="git--icon icon" src="/icons/github-logo.png" alt="Github social link"/>
                     </a>
-                    <a href="https://www.instagram.com/perpetuummobileftc/" target="_blank" className="social--link" rel="noreferrer">
+                    <a href="https://www.instagram.com/perpetuummobileftc/" target="_blank" className="social--link"
+                       rel="noreferrer">
                         <img className="insta--icon icon" src="/icons/instagram-logo.png" alt="Instagram social link"/>
                     </a>
                     <a href="https://discord.gg/8CPhWQCHhY" target="_blank" className="social--link" rel="noreferrer">
                         <img className="dis--icon icon" src="/icons/discord-logo.png" alt="Discord social link"/>
                     </a>
-                    <a href="https://www.facebook.com/perpetuummobilefirsttech/" target="_blank" className="social--link" rel="noreferrer">
+                    <a href="https://www.facebook.com/perpetuummobilefirsttech/" target="_blank"
+                       className="social--link" rel="noreferrer">
                         <img className="fb--icon icon" src="/icons/facebook-logo.png" alt="Facebook social link"/>
                     </a>
                 </div>
-                <p className="copyright">Copyright&copy; 2022 Perpetuum Mobile. Toate drepturile rezervate. Made with 🖤 by
+                <p className="copyright">Copyright&copy; 2022 Perpetuum Mobile. Toate drepturile rezervate. Made with 🖤
+                    by
                     Alex David and
                     Alexandra Moroz.</p>
             </footer>

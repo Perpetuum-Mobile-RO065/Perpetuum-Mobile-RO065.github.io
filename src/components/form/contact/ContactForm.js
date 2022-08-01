@@ -40,11 +40,12 @@ export default function ContactForm() {
                     <div className="contact-email_section">
                         <img alt="" className="contact-location_icon"
                              src="/icons/form-icon-location.png"/>
-                        <p className="contact-email_text contact-margin-5px">Strada Mihai Eminescu 5, Satu Mare 440014, SM,
+                        <p className="contact-email_text contact-margin-5px">Strada Mihai Eminescu 5, Satu Mare 440014,
+                            SM,
                             România</p>
                     </div>
                     <div className="contact-email_section">
-                        <img alt="" className="email_icon"
+                        <img alt="" className="contact-email_icon"
                              src="/icons/form-icon-email.png"/>
                         <p className="contact-margin-5px">perpetuum.mobile@eminescusm.ro</p>
                     </div>
@@ -67,13 +68,15 @@ export default function ContactForm() {
                             <TextInput label="Titlu" name="title" type="text" placeholder="Titlul mesajului"
                                        labelClass="contact-input-label" inputClass="contact-input-box"/>
                             <TextArea label="Mesaj" name="message" type="text"
-                                      placeholder="Bună ziua! Vă contactez în legătură cu..." labelClass="contact-input-label"
-                                      inputClass="contact-input-box message"/>
+                                      placeholder="Bună ziua! Vă contactez în legătură cu..."
+                                      labelClass="contact-input-label"
+                                      inputClass="contact-input-box contact-message"/>
                         </div>
                         <div className="contact-send">
                             <ReCAPTCHA sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
                                        onChange={handleCaptchaChange}/>
-                            <button type="submit" disabled={(isSubmitting || !captcha)} className="contact-submit">Trimite
+                            <button type="submit" disabled={(isSubmitting || !captcha)}
+                                    className="contact-submit">Trimite
                             </button>
                         </div>
                     </Form>}

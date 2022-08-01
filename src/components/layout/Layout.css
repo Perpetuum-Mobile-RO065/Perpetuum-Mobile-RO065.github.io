@@ -124,3 +124,11 @@
     margin: 0 75px 0 75px;
     color: transparent;
 }
+
+.main-body {
+    min-height: 59.5vh;
+    margin: 8vh 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

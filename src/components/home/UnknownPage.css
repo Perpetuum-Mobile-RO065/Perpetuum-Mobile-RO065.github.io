@@ -10,10 +10,3 @@
     height: available;
     position: relative;
 }
-
-.unknown-page {
-    min-height: 75.5vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}

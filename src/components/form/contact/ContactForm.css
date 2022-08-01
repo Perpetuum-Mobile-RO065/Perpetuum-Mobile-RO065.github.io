@@ -17,7 +17,7 @@
 
 .contact-form-template {
     width: 60%;
-    margin: 4rem auto;
+    margin: 0 auto;
     vertical-align: center;
     background: rgba(100, 164, 70, 0.75);
     border-radius: 10px;
@@ -106,7 +106,7 @@
     opacity: 1; /* Firefox */
 }
 
-.contact-input-box:-ms-input-placeholder{
+.contact-input-box:-ms-input-placeholder {
     color: rgba(26, 105, 66, 0.9);
 }
 
