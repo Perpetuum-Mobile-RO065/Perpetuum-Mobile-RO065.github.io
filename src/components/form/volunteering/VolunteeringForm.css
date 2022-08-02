@@ -1,0 +1,176 @@
+.volunteer-form-template {
+    width: 60%;
+    margin: 4rem auto;
+    vertical-align: center;
+    background: rgba(100, 164, 70, 0.75);
+    border-radius: 10px;
+    border: 10px solid rgba(26, 105, 66, 0.9);
+    font-family: 'Trispace', sans-serif;
+    display: flex;
+    height: fit-content;
+    font-weight: bold;
+}
+
+.volunteer-form {
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 125%;
+}
+
+.volunteer-divider {
+    height: 5px;
+    border: 0;
+    background-color: RGBA(169, 204, 141, 0.7);
+    width: available;
+    margin: 0;
+    border-radius: 5px;
+}
+
+.volunteer-margin-5px {
+    margin: 5px;
+    color: #212121;
+}
+
+.volunteer-contact-info {
+    color: rgb(33, 33, 33);
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.volunteer-maps-link {
+    color: rgb(169, 204, 141);
+    text-decoration: none;
+    margin: 0 0 0 5px;
+}
+
+.volunteer-maps-link:hover {
+    text-decoration: underline;
+}
+
+.volunteer-email_icon {
+    width: 6%;
+    height: 6%;
+    margin: 6px 8px 0 0;
+    padding: 0;
+    float: left;
+}
+
+.volunteer-email_section {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.volunteer-location_icon {
+    width: 5.5%;
+    height: 5.5%;
+    margin: 11px 8px 0 0;
+    padding: 0;
+    float: left;
+}
+
+.volunteer-address-location {
+    margin: 35% 0;
+}
+
+.volunteer-two-buttons {
+    display: flex;
+    margin: 0;
+}
+
+.volunteer-submit {
+    border-radius: 15px;
+    background-color: rgb(26, 105, 66);
+    color: RGB(169, 204, 141);
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: 1.5em;
+    height: fit-content;
+    border: 2px solid RGB(169, 204, 141);;
+    padding: 0.6rem;
+    margin: auto;
+    cursor: pointer;
+}
+
+.volunteer-submit:hover {
+    border-color: RGB(26, 105, 66);
+    background-color: RGB(169, 204, 141);
+    color: RGB(26, 105, 66);
+
+    -webkit-transition: border-color, color, background-position 200ms ease;
+    -moz-transition: border-color, color, background-position 200ms ease;
+    -o-transition: border-color, color, background-position 200ms ease;
+}
+
+.volunteer-submit:disabled {
+    opacity: 75%;
+    pointer-events: none;
+}
+
+.volunteer-message {
+    height: 9rem;
+    word-wrap: normal;
+    resize: none;
+}
+
+.volunteer-input-box {
+    background: rgb(169, 204, 141);
+    border: 2px solid rgb(33, 33, 33);
+    border-radius: 5px;
+
+    width: 100%;
+    padding: 12px 15px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    color: rgb(33, 33, 33);
+    font-family: 'Trispace', sans-serif;
+    font-size: 0.9em;
+    overflow-x: hidden;
+}
+
+.volunteer-input-box:focus {
+    outline: none !important;
+    box-shadow: -2px 2px 0 rgb(26, 105, 66),
+    2px 2px 0 rgb(26, 105, 66),
+    2px -2px 0 rgb(26, 105, 66),
+    -2px -2px 0 rgb(26, 105, 66);
+}
+
+.volunteer-input-label {
+    font-weight: bold;
+    color: #222222;
+}
+
+.volunteer-email {
+    text-decoration: none;
+    color: rgb(33, 33, 33);
+}
+
+.volunteer-email:hover {
+    text-decoration: underline;
+}
+
+.volunteer-email:visited {
+    color: inherit;
+}
+
+.multiple-choice-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 1rem 0;
+}
+
+.multiple-choice {
+    display: flex;
+    flex-direction: column;
+}
+
+.multiple-choice-option {
+    color: #212121;
+    margin: 0.3rem 0;
+}

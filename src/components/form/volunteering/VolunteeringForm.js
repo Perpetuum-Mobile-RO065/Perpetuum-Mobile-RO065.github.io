@@ -1,11 +1,12 @@
-import React, {useMemo, useState} from "react";
+import React, {useState} from "react";
 import useEmail from "../../../hooks/email/useEmail";
 import * as Yup from "yup";
 import {Form, Formik} from "formik";
 import ReCAPTCHA from "react-google-recaptcha";
 import TextInput from "../fields/text/TextInput";
-import Radio from "../fields/selectors/Radio";
 import TextArea from "../fields/text/TextArea";
+import "./VolunteeringForm.css";
+import Radio from "../fields/selectors/Radio";
 
 export default function VolunteeringForm() {
     const [captcha, setCaptcha] = useState(false);
@@ -19,68 +20,97 @@ export default function VolunteeringForm() {
         }
     }
 
-    const formSchema = useMemo(() => {
-        return Yup.object({
-            lastName: Yup.string().required("Last name is required"),
-            firstName: Yup.string().required("First name is required"),
-            email: Yup.string().email("Email is invalid").required("Email is required"),
-            phone: Yup.number(),
-            school: Yup.string().required("School is required"),
-            discord: Yup.string().matches(/^.{3,32}#\d{4}$/, "Discord ID is invalid"),
-            role: Yup.string().required("Role is required"),
-            department: Yup.string().required("Department is required"),
-            hobbies: Yup.string().max(1000, "Hobbies must be less than 1000 characters"),
-            qualifications: Yup.string().required("Qualifications are required"),
-            message: Yup.string().max(1000, "Message must be less than 1000 characters"),
-        });
-    }, []);
+    const formSchema = Yup.object({
+        name: Yup.string().trim().required("Numele este obligatoriu").max(150, "Numele trebuie să fie mai scurt de ${max} de caractere"),
+        email: Yup.string().trim().email("Adresa de email este invalidă").required("Adresa de email este obligatorie"),
+        phone: Yup.string().trim().matches(/^\d{10}$/, "Numărul de telefon este invalid"),
+        school: Yup.string().trim().required("Școala este obligatorie"),
+        discord: Yup.string().matches(/^.{3,32}#\d{4}$/, "ID-ul de Discord este invalid"),
+        role: Yup.string().trim().required("Rolul este obligatoriu"),
+        department: Yup.string().trim().required("Departamentul este obligatoriu"),
+        hobbies: Yup.string().trim().max(2500, "Mesajul trebuie să fie mai scurt de ${max} de caractere"),
+        qualifications: Yup.string().trim().required("Trebuie să specifici ce cunoștințe ai"),
+        message: Yup.string().trim().max(2500, "Mesajul trebuie să fie mai scurt de ${max} de caractere"),
+    });
 
     return (
-        <Formik initialValues={{
-            firstName: "",
-            lastName: "",
-            email: "",
-            phone: "",
-            school: "",
-            discord: "",
-            role: "",
-            department: "",
-            hobbies: "",
-            qualifications: "",
-            message: "",
-        }} validationSchema={formSchema}
-                onSubmit={(values) => {
-                    email(values);
-                }
-                }>
-            {({isSubmitting,}) => <Form>
-                <TextInput label="First name" name="firstName" type="text" placeholder="John"/>
-                <TextInput label="Last name" name="lastName" type="text" placeholder="Doe"/>
-                <TextInput label="Email" name="email" type="email" placeholder="email@example.com"/>
-                <TextInput label="Phone Number" name="phone" type="number" placeholder=""/>
-                <TextInput label="School" name="school" type="text" placeholder="School"/>
-                <TextInput label="Discord" name="discord" type="text" placeholder=""/>
-                <Radio label="Role" name="role">
-                    <option value="">Select Role</option>
-                    <option value="Member">Member</option>
-                    <option value="Volunteer">Volunteer</option>
-                </Radio>
+        <div className="volunteer-form-template">
+            <div className="volunteer-contact-info">
+                <h1>Alătură-te echipei noastre de robotică!</h1>
 
-                <Radio label="Department" name="department">
-                    <option value="">Select Department</option>
-                    <option value="Programare">Programare</option>
-                    <option value="Proiectare 3D">Proiectare 3D</option>
-                    <option value="Mecanica">Mecanica</option>
-                    <option value="PR">Public Relations (PR)</option>
-                    <option value="Caiet tehnic">Caiet tehnic</option>
-                </Radio>
+                <hr className={"volunteer-divider"}/>
 
-                <TextArea label="Hobbies" name="hobbies" placeholder="Hobbies"/>
-                <TextArea label="Qualifications" name="qualifications" placeholder="Qualifications"/>
-                <TextArea label="Message" name="message" placeholder="Message"/>
-                <button type="submit" disabled={isSubmitting || !captcha}>Submit</button>
-                <ReCAPTCHA sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY} onChange={handleCaptchaChange}/>
-            </Form>}
-        </Formik>
+                <div className="volunteer-form_text">
+                    <p className="volunteer-margin-5px">Completează formularul alăturat pentru un posibil loc în echipă.</p>
+
+                    <div className="volunteer-address-location">
+                        <div className="volunteer-email_section">
+                            <img alt="" className="volunteer-location_icon" src="/icons/form-icon-location.png"/>
+                            <p className="volunteer-email_text volunteer-margin-5px">Strada Mihai Eminescu 5, Satu Mare 440014, SM,
+                                România</p>
+                        </div>
+
+                        <div className="volunteer-email_section">
+                            <img alt="" className="volunteer-email_icon" src="/icons/form-icon-email.png"/>
+                            <a className="volunteer-margin-5px volunteer-email" href={"mailto:perpetuum.mobile@eminescusm.ro"}>perpetuum.mobile@eminescusm.ro</a>
+                        </div>
+                    </div>
+
+                    <p className="volunteer-margin-5px">Nu sunteți siguri de locație? </p>
+                    <a href="https://www.google.com/maps/place/Colegiul+Na%C8%9Bional+Mihai+Eminescu+Satu+Mare/@47.7893913,22.8741361,17z/data=!3m1!4b1!4m5!3m4!1s0x473805cdaac2883b:0x49b9e88a38ed23fe!8m2!3d47.7893834!4d22.8763575"
+                       target="_blank" className="volunteer-maps-link" rel="noreferrer">Ne găsiți pe Google Maps!</a>
+                </div>
+            </div>
+            <Formik initialValues={{
+                name: "",
+                email: "",
+                phone: "",
+                school: "",
+                discord: "",
+                role: "Membru",
+                department: "Programare",
+                hobbies: "",
+                qualifications: "",
+                message: "",
+            }} validationSchema={formSchema}
+                    onSubmit={(values) => {
+                        email(values);
+                    }
+                    }>
+                {({isSubmitting,}) => <Form className={"volunteer-form"}>
+                    <div>
+                        <TextInput label="Nume complet" name="name" type="text" placeholder="Nume Prenume" inputClass={"volunteer-input-box"} labelClass={"volunteer-input-label"}/>
+                        <TextInput label="Email" name="email" type="email" placeholder="email@example.com" inputClass={"volunteer-input-box"} labelClass={"volunteer-input-label"}/>
+                        <TextInput label="Număr de telefon" name="phone" type="tel" placeholder="" inputClass={"volunteer-input-box"} labelClass={"volunteer-input-label"}/>
+                        <TextInput label="Școala" name="school" type="text" placeholder="Școala" inputClass={"volunteer-input-box"} labelClass={"volunteer-input-label"}/>
+                        <TextInput label="Discord" name="discord" type="text" placeholder="Nume#1234" inputClass={"volunteer-input-box"} labelClass={"volunteer-input-label"}/>
+
+                        <div className={"multiple-choice-section"}>
+                            <div className={"multiple-choice"}>
+                                <p>Rol</p>
+                                <Radio type="radio" label="Membru" value="Membru" name="role" labelClass="multiple-choice-option" checked/>
+                                <Radio type="radio" label="Voluntar" value="Voluntar" name="role" labelClass="multiple-choice-option"/>
+                            </div>
+
+                            <div className={"multiple-choice"}>
+                                <p>Departament</p>
+                                <Radio type="radio" label="Programare" value="Programare" name="department" labelClass="multiple-choice-option" checked/>
+                                <Radio type="radio" label="Proiectare 3D & Design" value="Proiectare 3D & Design" name="department" labelClass="multiple-choice-option"/>
+                                <Radio type="radio" label="Mecanica" value="Mecanica" name="department" labelClass="multiple-choice-option"/>
+                                <Radio type="radio" label="Public Relations" value="Public Relations" name="department" labelClass="multiple-choice-option"/>
+                            </div>
+                        </div>
+
+                        <TextArea label="Hobby-uri" name="hobbies" placeholder="În timpul liber îmi place să..." inputClass={"volunteer-message volunteer-input-box"} labelClass={"volunteer-input-label"}/>
+                        <TextArea label="Rezultate obținute" name="qualifications" placeholder="Ce lucruri despre tine ne-ar putea impresiona?" inputClass={"volunteer-message volunteer-input-box"} labelClass={"volunteer-input-label"}/>
+                        <TextArea label="Mesaj opțional" name="message" placeholder="Mai ai ceva ce ai dori să ne spui?" inputClass={"volunteer-message volunteer-input-box"} labelClass={"volunteer-input-label"}/>
+                    </div>
+                    <div className={"volunteer-two-buttons"}>
+                        <ReCAPTCHA sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY} onChange={handleCaptchaChange}/>
+                        <button type="submit" disabled={isSubmitting || !captcha} className={"volunteer-submit"}>Trimite</button>
+                    </div>
+                </Form>}
+            </Formik>
+        </div>
     )
 }
