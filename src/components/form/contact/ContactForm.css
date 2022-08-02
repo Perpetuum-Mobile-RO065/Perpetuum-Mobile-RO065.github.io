@@ -24,7 +24,7 @@
     border: 10px solid rgba(26, 105, 66, 0.9);
     font-family: 'Trispace', sans-serif;
     display: flex;
-    height: 35rem;
+    height: fit-content;
     font-weight: bold;
 }
 
@@ -85,6 +85,21 @@
     cursor: pointer;
 }
 
+.contact-submit:hover {
+    border-color: RGB(26, 105, 66);
+    background-color: RGB(169, 204, 141);
+    color: RGB(26, 105, 66);
+
+    -webkit-transition: border-color, color, background-position 200ms ease;
+    -moz-transition: border-color, color, background-position 200ms ease;
+    -o-transition: border-color, color, background-position 200ms ease;
+}
+
+.contact-submit:disabled {
+    opacity: 75%;
+    pointer-events: none;
+}
+
 .contact-input-box {
     background: rgb(169, 204, 141);
     border: 2px solid rgb(33, 33, 33);
@@ -141,4 +156,8 @@
     height: 9rem;
     word-wrap: normal;
     resize: none;
+}
+
+.contact-email:hover {
+    text-decoration: underline;
 }

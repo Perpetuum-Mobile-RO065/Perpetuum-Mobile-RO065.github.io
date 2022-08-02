@@ -1,5 +1,10 @@
 .error {
-    color: rgba(255, 0, 0);
-    margin-left: 10px;
+    color: #d9442d;
 }
 
+.error-outline {
+    box-shadow: -2px 2px 0 #d9442d,
+    2px 2px 0 #d9442d,
+    2px -2px 0 #d9442d,
+    -2px -2px 0 #d9442d !important;
+}

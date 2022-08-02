@@ -20,10 +20,10 @@ export default function ContactForm() {
     }
 
     const formSchema = Yup.object({
-        userName: Yup.string().required("Numele este obligatoriu").max(150, "Numele trebuie să fie mai scurt de 150 de caractere"),
-        email: Yup.string().email("Adresa de email este invalidă").required("Adresa de email este obligatorie"),
-        message: Yup.string().required("Mesajul este obligatoriu").max(10000, "Mesajul trebuie să fie mai scurt de 10000 de caractere"),
-        title: Yup.string().required("Titlul este obligatoriu").max(150, "Titlul trebuie să fie mai scurt de 150 de caractere"),
+        userName: Yup.string().trim().required("Numele este obligatoriu").max(150, "Numele trebuie să fie mai scurt de 150 de caractere"),
+        email: Yup.string().trim().email("Adresa de email este invalidă").required("Adresa de email este obligatorie"),
+        message: Yup.string().trim().required("Mesajul este obligatoriu").max(10000, "Mesajul trebuie să fie mai scurt de 10000 de caractere"),
+        title: Yup.string().trim().required("Titlul este obligatoriu").max(150, "Titlul trebuie să fie mai scurt de 150 de caractere"),
     });
 
     return (
@@ -47,7 +47,7 @@ export default function ContactForm() {
                     <div className="contact-email_section">
                         <img alt="" className="contact-email_icon"
                              src="/icons/form-icon-email.png"/>
-                        <p className="contact-margin-5px">perpetuum.mobile@eminescusm.ro</p>
+                        <p className="contact-margin-5px contact-email">perpetuum.mobile@eminescusm.ro</p>
                     </div>
                     <br/><br/>
                     <p className="contact-margin-5px">Nu sunteți siguri de locație? </p>
@@ -63,7 +63,7 @@ export default function ContactForm() {
                         <div>
                             <TextInput label="Nume complet" name="userName" type="text" placeholder="Nume Prenume"
                                        labelClass="contact-input-label" inputClass="contact-input-box"/>
-                            <TextInput label="Email" name="email" type="email" placeholder="email@example.com"
+                            <TextInput label="Email" name="email" type="text" placeholder="email@example.com"
                                        labelClass="contact-input-label" inputClass="contact-input-box"/>
                             <TextInput label="Titlu" name="title" type="text" placeholder="Titlul mesajului"
                                        labelClass="contact-input-label" inputClass="contact-input-box"/>
