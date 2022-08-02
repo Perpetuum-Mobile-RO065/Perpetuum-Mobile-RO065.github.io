@@ -161,3 +161,12 @@
 .contact-email:hover {
     text-decoration: underline;
 }
+
+.contact-email {
+    text-decoration: none;
+    color: rgb(33, 33, 33);
+}
+
+.contact-email:visited {
+    color: inherit;
+}
