@@ -22,6 +22,7 @@ export default function App() {
                     <Route path="voluntariat">
                         <Route index element={<VolunteeringForm/>}/>
                         <Route path="success" element={<FormConfirmation/>}/>
+                        <Route path="error" element={<FormFailure/>}/>
                     </Route>
                     <Route path="/contact">
                         <Route index element={<ContactForm/>}/>
