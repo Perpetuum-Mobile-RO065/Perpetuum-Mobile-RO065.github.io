@@ -19,17 +19,17 @@ export default function VolunteeringForm() {
             setCaptcha(true);
         }
     }
-
+    //TODO Implement the school data and create a select field instead of a text one for the school
     const formSchema = Yup.object({
         name: Yup.string().trim().required("Numele este obligatoriu").max(150, "Numele trebuie să fie mai scurt de ${max} de caractere"),
         email: Yup.string().trim().email("Adresa de email este invalidă").required("Adresa de email este obligatorie"),
         phone: Yup.string().trim().matches(/^\d{10}$/, "Numărul de telefon este invalid"),
-        school: Yup.string().trim().required("Școala este obligatorie"),
+        school: Yup.string().required("Trebuie să menționezi școala de proveniență"),
         discord: Yup.string().matches(/^.{3,32}#\d{4}$/, "ID-ul de Discord este invalid"),
         role: Yup.string().trim().required("Rolul este obligatoriu"),
         department: Yup.string().trim().required("Departamentul este obligatoriu"),
         hobbies: Yup.string().trim().max(2500, "Mesajul trebuie să fie mai scurt de ${max} de caractere"),
-        qualifications: Yup.string().trim().required("Trebuie să specifici ce cunoștințe ai"),
+        qualifications: Yup.string().trim().required("Trebuie să specifici ce cunoștințe ai").max(2500, "Mesajul trebuie să fie mai scurt de ${max} de caractere"),
         message: Yup.string().trim().max(2500, "Mesajul trebuie să fie mai scurt de ${max} de caractere"),
     });
 
@@ -87,16 +87,16 @@ export default function VolunteeringForm() {
 
                         <div className={"multiple-choice-section"}>
                             <div className={"multiple-choice"}>
-                                <p>Rol</p>
+                                <p className="volunteer-margin-5px">Rol</p>
                                 <Radio type="radio" label="Membru" value="Membru" name="role" labelClass="multiple-choice-option" checked/>
                                 <Radio type="radio" label="Voluntar" value="Voluntar" name="role" labelClass="multiple-choice-option"/>
                             </div>
 
                             <div className={"multiple-choice"}>
-                                <p>Departament</p>
+                                <p className="volunteer-margin-5px">Departament</p>
                                 <Radio type="radio" label="Programare" value="Programare" name="department" labelClass="multiple-choice-option" checked/>
                                 <Radio type="radio" label="Proiectare 3D & Design" value="Proiectare 3D & Design" name="department" labelClass="multiple-choice-option"/>
-                                <Radio type="radio" label="Mecanica" value="Mecanica" name="department" labelClass="multiple-choice-option"/>
+                                <Radio type="radio" label="Mecanică" value="Mecanică" name="department" labelClass="multiple-choice-option"/>
                                 <Radio type="radio" label="Public Relations" value="Public Relations" name="department" labelClass="multiple-choice-option"/>
                             </div>
                         </div>
@@ -107,7 +107,7 @@ export default function VolunteeringForm() {
                     </div>
                     <div className={"volunteer-two-buttons"}>
                         <ReCAPTCHA sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY} onChange={handleCaptchaChange}/>
-                        <button type="submit" disabled={isSubmitting || !captcha} className={"volunteer-submit"}>Trimite</button>
+                        <button type="submit" disabled={isSubmitting || !captcha} className={"volunteer-submit"}>{isSubmitting ? "Se trimite..." : "Trimite"}</button>
                     </div>
                 </Form>}
             </Formik>

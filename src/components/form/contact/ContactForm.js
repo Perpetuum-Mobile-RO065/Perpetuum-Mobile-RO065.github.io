@@ -76,7 +76,7 @@ export default function ContactForm() {
                             <ReCAPTCHA sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
                                        onChange={handleCaptchaChange}/>
                             <button type="submit" disabled={(isSubmitting || !captcha)}
-                                    className="contact-submit">Trimite
+                                    className="contact-submit">{isSubmitting ? "Se trimite..." : "Trimite"}
                             </button>
                         </div>
                     </Form>}
