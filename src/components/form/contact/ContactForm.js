@@ -20,10 +20,10 @@ export default function ContactForm() {
     }
 
     const formSchema = Yup.object({
-        userName: Yup.string().trim().required("Numele este obligatoriu").max(150, "Numele trebuie să fie mai scurt de 150 de caractere"),
+        userName: Yup.string().trim().required("Numele este obligatoriu").max(150, "Numele trebuie să fie mai scurt de ${max} de caractere"),
         email: Yup.string().trim().email("Adresa de email este invalidă").required("Adresa de email este obligatorie"),
-        message: Yup.string().trim().required("Mesajul este obligatoriu").max(10000, "Mesajul trebuie să fie mai scurt de 10000 de caractere"),
-        title: Yup.string().trim().required("Titlul este obligatoriu").max(150, "Titlul trebuie să fie mai scurt de 150 de caractere"),
+        message: Yup.string().trim().required("Mesajul este obligatoriu").max(10000, "Mesajul trebuie să fie mai scurt de ${max} de caractere"),
+        title: Yup.string().trim().required("Titlul este obligatoriu").max(150, "Titlul trebuie să fie mai scurt de ${max} de caractere"),
     });
 
     return (
