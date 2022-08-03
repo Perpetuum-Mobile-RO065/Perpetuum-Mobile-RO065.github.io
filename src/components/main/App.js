@@ -9,6 +9,8 @@ import VolunteeringForm from "../form/volunteering/VolunteeringForm";
 import ContactForm from "../form/contact/ContactForm";
 import FormFailure from "../form/redirect/FormFailure";
 import UnknownPage from "../home/UnknownPage";
+import Contact from "../form/contact/Contact";
+import Volunteer from "../form/volunteering/Volunteer";
 
 
 export default function App() {
@@ -19,12 +21,12 @@ export default function App() {
                     <Route index element={<Home/>}/>
                     <Route path="echipa" element={<Team/>}/>
                     <Route path="sponsori" element={<Sponsors/>}/>
-                    <Route path="voluntariat">
+                    <Route path="voluntariat" element={<Volunteer/>}>
                         <Route index element={<VolunteeringForm/>}/>
                         <Route path="success" element={<FormConfirmation/>}/>
                         <Route path="error" element={<FormFailure/>}/>
                     </Route>
-                    <Route path="/contact">
+                    <Route path="contact" element={<Contact/>}>
                         <Route index element={<ContactForm/>}/>
                         <Route path="success" element={<FormConfirmation/>}/>
                         <Route path="error" element={<FormFailure/>}/>
