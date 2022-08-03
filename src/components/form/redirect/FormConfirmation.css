@@ -1,0 +1,11 @@
+.success-section {
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 125%;
+}
+
+.success-message {
+
+}
