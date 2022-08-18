@@ -7,7 +7,8 @@ import TextInput from "../fields/text/TextInput";
 import TextArea from "../fields/text/TextArea";
 import "./VolunteeringForm.css";
 import Radio from "../fields/selectors/Radio";
-import {Volunteer} from "./Volunteer";
+import Select from "../fields/selectors/Select";
+import schools from "../../../assets/data/schools";
 
 export default function VolunteeringForm() {
     const [captcha, setCaptcha] = useState(false);
@@ -20,8 +21,9 @@ export default function VolunteeringForm() {
             setCaptcha(true);
         }
     }
-    //TODO Implement the school data and create a select field instead of a text one for the school
+
     const formSchema = Yup.object({
+        // eslint-disable-next-line
         name: Yup.string().trim().required("Numele este obligatoriu").max(150, "Numele trebuie să fie mai scurt de ${max} de caractere"),
         email: Yup.string().trim().email("Adresa de email este invalidă").required("Adresa de email este obligatorie"),
         phone: Yup.string().trim().matches(/^\d{10}$/, "Numărul de telefon este invalid"),
@@ -29,8 +31,11 @@ export default function VolunteeringForm() {
         discord: Yup.string().matches(/^.{3,32}#\d{4}$/, "ID-ul de Discord este invalid"),
         role: Yup.string().trim().required("Rolul este obligatoriu"),
         department: Yup.string().trim().required("Departamentul este obligatoriu"),
+        // eslint-disable-next-line
         hobbies: Yup.string().trim().max(2500, "Mesajul trebuie să fie mai scurt de ${max} de caractere"),
+        // eslint-disable-next-line
         qualifications: Yup.string().trim().required("Trebuie să specifici ce cunoștințe ai").max(2500, "Mesajul trebuie să fie mai scurt de ${max} de caractere"),
+        // eslint-disable-next-line
         message: Yup.string().trim().max(2500, "Mesajul trebuie să fie mai scurt de ${max} de caractere"),
     });
 
@@ -59,8 +64,12 @@ export default function VolunteeringForm() {
                                inputClass={"volunteer-input-box"} labelClass={"volunteer-input-label"}/>
                     <TextInput label="Număr de telefon" name="phone" type="tel" placeholder=""
                                inputClass={"volunteer-input-box"} labelClass={"volunteer-input-label"}/>
-                    <TextInput label="Școala" name="school" type="text" placeholder="Școala"
-                               inputClass={"volunteer-input-box"} labelClass={"volunteer-input-label"}/>
+
+                    <Select label={"Școală"} labelClass={"volunteer-input-label"} selectClass={"volunteer-input-box volunteer-dropdown"} name={"school"}>
+                        <option value="">Școala la care înveți</option>
+                        {schools.map((school, index) => <option key={index} value={school.name}>{school.name}</option>)}
+                    </Select>
+
                     <TextInput label="Discord" name="discord" type="text" placeholder="Nume#1234"
                                inputClass={"volunteer-input-box"} labelClass={"volunteer-input-label"}/>
 

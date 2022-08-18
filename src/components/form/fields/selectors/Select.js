@@ -2,13 +2,12 @@ import React from "react";
 import {useField} from "formik";
 import '../Fieldset.css';
 
-export default function Select({label, divClass, inputClass, labelClass, ...props}) {
+export default function Select({label, selectClass, labelClass, ...props}) {
     const [field, meta] = useField(props);
     return (
-        <div className={divClass}>
-            <label htmlFor={props.name} className={labelClass}>{label}</label>
-            <select {...field} {...props} className={inputClass}/>
-            {meta.touched && meta.error ? (<div className="error">{meta.error}</div>) : null}
-        </div>
+        <label htmlFor={props.name} className={labelClass}>{meta.touched && meta.error ? (
+            <span className="error">{meta.error}</span>) : label}
+            <select {...field} {...props} className={selectClass}/>
+        </label>
     );
 }
