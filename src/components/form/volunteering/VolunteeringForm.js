@@ -77,7 +77,7 @@ export default function VolunteeringForm() {
                         <div className={"multiple-choice"}>
                             <p className="volunteer-margin-5px">Rol</p>
                             <Radio type="radio" label="Membru" value="Membru" name="role"
-                                   labelClass="multiple-choice-option" checked/>
+                                   labelClass="multiple-choice-option"/>
                             <Radio type="radio" label="Voluntar" value="Voluntar" name="role"
                                    labelClass="multiple-choice-option"/>
                         </div>
@@ -85,7 +85,7 @@ export default function VolunteeringForm() {
                         <div className={"multiple-choice"}>
                             <p className="volunteer-margin-5px">Departament</p>
                             <Radio type="radio" label="Programare" value="Programare" name="department"
-                                   labelClass="multiple-choice-option" checked/>
+                                   labelClass="multiple-choice-option"/>
                             <Radio type="radio" label="Proiectare 3D & Design" value="Proiectare 3D & Design"
                                    name="department" labelClass="multiple-choice-option"/>
                             <Radio type="radio" label="Mecanică" value="Mecanică" name="department"

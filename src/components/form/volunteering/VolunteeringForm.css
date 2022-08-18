@@ -177,6 +177,7 @@
 }
 
 .volunteer-dropdown {
-    color: rgba(26, 105, 66, 0.9);
-    font-weight: bold;
+    color: #212121;
+    margin: 0.3rem 0;
+    font-weight: normal;
 }
