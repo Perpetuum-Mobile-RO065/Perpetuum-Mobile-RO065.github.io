@@ -47,6 +47,13 @@ export default function Layout() {
                        className="social--link" rel="noreferrer">
                         <img className="fb--icon icon" src="/icons/facebook-logo.png" alt="Facebook social link"/>
                     </a>
+                    <a href="https://www.printables.com/social/273911-perpetuum-mobile-065/about" target="_blank"
+                       className="social--link" rel="noreferrer">
+                        <img className="icon printables--icon" src="/icons/printables-logo.png" alt="Printables social link"/>
+                    </a>
+                    <a href="mailto:perpetuum.mobile@eminescusm.ro" target="_blank" className="social--link" rel="noreferrer">
+                        <img className="icon mail--icon" src="/icons/form-icon-email.png" alt="Email us"/>
+                    </a>
                 </div>
                 <p className="copyright">Copyright&copy; 2022 Perpetuum Mobile. Toate drepturile rezervate. Made with 🖤
                     by
