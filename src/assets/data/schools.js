@@ -3,9 +3,6 @@ const schools = [
         name: "Colegiul Național \"Doamnca Stanca\" Satu Mare",
     },
     {
-        name: "Școala gimnazială \"Grigore Moisil\" Satu Mare",
-    },
-    {
         name: "Colegiul Național \"Kölcsey Ferenc\" Satu Mare",
     },
     {
@@ -15,97 +12,16 @@ const schools = [
         name: "Liceul Teoretic Ortodox \"Nicolae Steinhardt\" Satu Mare",
     },
     {
-        name: "Școala gimnazială \"Avram Iancu\" Satu Mare",
-    },
-    {
-        name: "Școala gimnazială \"Bălcescu Petőfi\" Satu Mare",
-    },
-    {
-        name: "Școala gimnazială \"Mircea Eliade\" Satu Mare",
-    },
-    {
-        name: "Școala gimnazială \"Lucian Blaga\" Satu Mare",
-    },
-    {
-        name: "Școala gimnazială \"Octavian Goga\" Satu Mare",
-    },
-    {
-        name: "Școala gimnazială \"Rakoczi Ferenc\" Satu Mare",
-    },
-    {
-        name: "Școala gimnazială \"Vasile Lucaciu\" Carei",
-    },
-    {
         name: "Liceul Teoretic Carei",
     },
     {
         name: "Liceul Teoretic Negrești-Oaș",
     },
     {
-        name: "Școala gimnazială nr.3 Negrești-Oaș",
-    },
-    {
-        name: "Școala gimnazială Tășnad",
-    },
-    {
         name: "Liceul Tehnologic Ardud",
     },
     {
-        name: "Școala gimnazială \"Petőfi Sandor\" Livada",
-    },
-    {
-        name: "Școala gimnazială Acâș",
-    },
-    {
         name: "Liceul Tehnologic \"Petru Cupcea\" Supuru de Jos",
-    },
-    {
-        name: "Școala gimnazială Botiz",
-    },
-    {
-        name: "Școala gimnazială \"Fenyi Istvan\" Căpleni",
-    },
-    {
-        name: "Școala gimnazială \"Iuliu Coroianu\" Craidorolț",
-    },
-    {
-        name: "Școala gimnazială Poiana Codrului",
-    },
-    {
-        name: "Școala gimnazială Culciu Mare",
-    },
-    {
-        name: "Școala gimnazială Doba",
-    },
-    {
-        name: "Școala gimnazială Gherța Mică",
-    },
-    {
-        name: "Școala gimnazială Halmeu",
-    },
-    {
-        name: "Școala gimnazială Homorodu de Mijloc",
-    },
-    {
-        name: "Școala gimnazială \"Petőfi Sandor\" Lazuri",
-    },
-    {
-        name: "Școala gimnazială Odoreu",
-    },
-    {
-        name: "Școala gimnazială Orașu Nou",
-    },
-    {
-        name: "Școala gimnazială Păulești",
-    },
-    {
-        name: "Școala gimnazială Pișcolt",
-    },
-    {
-        name: "Școala gimnazială Ciumești",
-    },
-    {
-        name: "Școala gimnazială Santău",
     },
     {
         name: "Liceul Tehnologic Tarna Mare",
@@ -114,7 +30,53 @@ const schools = [
         name: "Liceul Tehnologic \"Anghel Saligny\" Turț",
     },
     {
-        name: "Școala gimnazială Vetiș",
+        name: "Colegiul Economic \"Gheorghe Dragoș\" Satu Mare",
+    },
+    {
+        name: "Liceul cu Program Sportiv Satu Mare",
+    },
+    {
+        name: "Liceul de Arte \"Aurel Popp\" Satu Mare",
+    },
+    {
+        name: "Liceul Reformat Satu Mare",
+    },
+    {
+        name: "Liceul Romano-catolic \"Josephus Calasantius\" Carei",
+
+    },
+    {
+        name: "Liceul Tehnologic \"Constantin Brâncuși\" Satu Mare",
+    },
+    {
+        name: "Liceul Tehnologic \"Eliza Zamfirescu\" Satu Mare",
+    },
+    {
+      name: "Liceul Tehnologic \"George Barițiu\" Livada"
+    },
+    {
+        name: "Liceul Tehnologic \"Ion I. C. Brătianu\" Satu Mare"
+    },
+    {
+        name: "Liceul Tehnologic \"Ioniță G. Andron\" Negrești-Oaș"
+    },
+    {
+        name: "Liceul Tehnologic \"Iuliu Maniu\" Carei"
+    },
+    {
+        name: "Liceul Tehnologic de industrie alimentară \"George Emil Palade\" Satu Mare"
+    },
+    {
+        name: "Liceul Tehnologic Tășnad"
+    },
+    {
+        name: "Liceul Teologic Romano-catolic \"Ham Janos\" Satu Mare"
+    },
+    {
+        name: "Liceul Teoretic german \"Johann Ettinger\" Satu Mare"
+    },
+    {
+        name: "Liceul Teoretic \"George Pop de Băsești\" Satu Mare"
     },
 ];
 
