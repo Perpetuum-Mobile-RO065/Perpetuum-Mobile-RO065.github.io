@@ -1,0 +1,48 @@
+.wrongful-message {
+    color: #212121;
+    font-family: inherit;
+    text-align: center;
+}
+
+.wrongful-robot-image {
+    margin: 0 auto;
+    padding: 0;
+    display: block;
+    max-width: 230px;
+    max-height: 75vh;
+    width: auto;
+    height: auto;
+}
+
+.back-button {
+    border-radius: 15px;
+    background-color: rgb(26, 105, 66);
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: 1.5em;
+    height: fit-content;
+    border: 2px solid RGB(169, 204, 141);;
+    padding: 0.6rem;
+    cursor: pointer;
+    margin: 20px auto 10px auto;
+    text-decoration: none;
+    color: RGB(169, 204, 141);
+    width: fit-content;
+}
+
+.back-button:hover {
+    border-color: RGB(26, 105, 66);
+    background-color: RGB(169, 204, 141);
+    color: RGB(26, 105, 66);
+    -webkit-transition: border-color, color, background-position 200ms ease;
+    -moz-transition: border-color, color, background-position 200ms ease;
+    -o-transition: border-color, color, background-position 200ms ease;
+}
+
+.wrongful-section {
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 125%;
+}
