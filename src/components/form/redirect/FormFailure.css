@@ -1,18 +1,18 @@
-.success-section {
+.form-failure {
     margin: 2rem;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 125%;
+    max-width: 75vh;
 }
 
-.success-message {
+.fail-message {
     color: #212121;
     font-family: inherit;
     text-align: center;
 }
 
-.robot-image {
+.fail-robot-image {
     margin: 0 auto;
     padding: 0;
     display: block;
