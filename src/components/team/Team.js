@@ -1,10 +1,8 @@
 import React from "react";
+import UnderConstruction from "../home/UnderConstruction";
 
 export default function Team() {
     return (
-        <div>
-            <h1>This is the team page</h1>
-            <p>Lorem ipsum smth</p>
-        </div>
+        <UnderConstruction/>
     )
 }
