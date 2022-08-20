@@ -12,7 +12,7 @@ export default function FormFailure() {
         state === null ? <WrongfulRedirect/> :
             <div className="form-failure">
                 <h2 className="fail-message">HMMM... Ceva a mers prost și formularul nu a putut fi trimis...</h2>
-                <img src="/images/gear-robot.png" alt={"Robot holding a gear"} className={"fail-robot-image"}/>
+                <img src="/images/robots/gear-robot.png" alt={"Robot holding a gear"} className={"fail-robot-image"}/>
                 <h2 className="success-message">Te rugăm să ne contactezi manual pe adresa de email.</h2>
             </div>
     )

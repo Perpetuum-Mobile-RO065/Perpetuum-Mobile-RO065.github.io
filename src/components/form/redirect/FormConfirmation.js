@@ -12,7 +12,7 @@ export default function FormConfirmation() {
             <div className="success-section">
                 <h2 className="success-message">YAY! Mesajul a fost trimis cu succes de pe
                     adresa {state.email}.</h2>
-                <img alt="Happy robot cheering" src="/images/happy-robot.png" className={"robot-image"}/>
+                <img alt="Happy robot cheering" src="/images/robots/happy-robot.png" className={"robot-image"}/>
             </div>
     )
 }
