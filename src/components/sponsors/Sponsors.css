@@ -1,0 +1,48 @@
+.sponsors-page {
+    width: 60%;
+    background: rgba(100, 164, 70, 0.75);
+    border-radius: 10px;
+    border: 10px solid rgba(26, 105, 66, 0.9);
+    font-family: 'Trispace', sans-serif;
+    display: flex;
+    font-weight: bold;
+    flex-direction: column;
+    position: relative;
+    margin: 0 auto;
+    color: #212121;
+}
+
+.sponsors-navigation {
+    border-radius: 15px;
+    background-color: rgb(26, 105, 66);
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: 1.5em;
+    height: fit-content;
+    border: 2px solid RGB(169, 204, 141);;
+    padding: 0.6rem;
+    cursor: pointer;
+    margin: 20px auto;
+    text-decoration: none;
+    color: RGB(169, 204, 141);
+    width: fit-content;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    alignment: center;
+}
+
+.sponsors-link {
+    text-wrap: none;
+    text-decoration: none;
+    color: #212121;
+    margin: 10px 5px;
+}
+
+.sponsors-link:hover {
+    text-decoration: underline;
+}
+
+.sponsors-separator {
+    margin: 10px 5px;
+}
