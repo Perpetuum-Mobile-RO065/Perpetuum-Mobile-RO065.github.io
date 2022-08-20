@@ -1,5 +1,5 @@
 import React from "react"
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
 import FormConfirmation from "../form/redirect/FormConfirmation";
 import Layout from "../layout/Layout";
 import Home from "../home/Home";
@@ -11,6 +11,7 @@ import FormFailure from "../form/redirect/FormFailure";
 import UnknownPage from "../home/UnknownPage";
 import Contact from "../form/contact/Contact";
 import Volunteer from "../form/volunteering/Volunteer";
+import Season from "../sponsors/Season";
 
 
 export default function App() {
@@ -20,7 +21,9 @@ export default function App() {
                 <Route path="/" element={<Layout/>}>
                     <Route index element={<Home/>}/>
                     <Route path="echipa" element={<Team/>}/>
-                    <Route path="sponsori" element={<Sponsors/>}/>
+                    <Route path="sponsori" element={<Sponsors/>}>
+                        <Route path={":season"} element={<Season/>}/>
+                    </Route>
                     <Route path="voluntariat" element={<Volunteer/>}>
                         <Route index element={<VolunteeringForm/>}/>
                         <Route path="success" element={<FormConfirmation/>}/>
@@ -31,10 +34,10 @@ export default function App() {
                         <Route path="success" element={<FormConfirmation/>}/>
                         <Route path="error" element={<FormFailure/>}/>
                     </Route>
-                    <Route path="*" element={<UnknownPage/>}/>
+                    <Route path="404" element={<UnknownPage/>}/>
+                    <Route path="*" element={<Navigate to={"404"}/>}/>
                 </Route>
             </Routes>
         </BrowserRouter>
-
     );
 }
