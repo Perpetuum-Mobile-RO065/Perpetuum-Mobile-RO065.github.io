@@ -1,13 +1,13 @@
 import React from "react"
 import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
-import FormConfirmation from "../form/redirect/FormConfirmation";
+import FormConfirmation from "../form/redirect/success/FormConfirmation";
 import Layout from "../layout/Layout";
 import Home from "../home/Home";
 import Team from "../team/Team";
 import Sponsors from "../sponsors/Sponsors";
 import VolunteeringForm from "../form/volunteering/VolunteeringForm";
 import ContactForm from "../form/contact/ContactForm";
-import FormFailure from "../form/redirect/FormFailure";
+import FormFailure from "../form/redirect/error/FormFailure";
 import UnknownPage from "../home/UnknownPage";
 import Contact from "../form/contact/Contact";
 import Volunteer from "../form/volunteering/Volunteer";

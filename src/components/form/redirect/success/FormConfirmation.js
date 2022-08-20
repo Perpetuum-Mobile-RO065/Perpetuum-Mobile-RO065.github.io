@@ -1,7 +1,7 @@
 import React from "react";
 import {useLocation} from "react-router-dom";
 import './FormConfirmation.css';
-import WrongfulRedirect from "./WrongfulRedirect";
+import WrongfulRedirect from "../WrongfulRedirect";
 
 export default function FormConfirmation() {
     const location = useLocation();
