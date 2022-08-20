@@ -66,7 +66,7 @@ export default function VolunteeringForm() {
                                inputClass={"volunteer-input-box"} labelClass={"volunteer-input-label"}/>
 
                     <Select label={"Școală"} labelClass={"volunteer-input-label"} selectClass={"volunteer-input-box volunteer-dropdown"} name={"school"}>
-                        <option value="">Școala la care înveți</option>
+                        <option value="" disabled={true}>Școala la care înveți</option>
                         {schools.map((school, index) => <option key={index} value={school.name}>{school.name}</option>)}
                     </Select>
 
