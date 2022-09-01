@@ -36,7 +36,7 @@ function SponsorType({type, sponsors, season}) {
 function Sponsor(props) {
     return (
         <div className={"sponsor"}>
-            <img style={{width: "90%"}} src={`/images/sponsors/${props.season}/${props.image}`} alt={props.name}/>
+            <img src={`/images/sponsors/${props.season}/${props.image}`} alt={props.name} className={"sponsors-logo"}/>
         </div>
     )
 }

@@ -8,7 +8,7 @@ const sponsors = [
                     {
                         name: "Zollner",
                         image: "zollner.png",
-                        link: "https://www.zollner.com/",
+                        link: "https://www.zollner.ro",
                     },
                 ]
             },
@@ -18,45 +18,60 @@ const sponsors = [
                     {
                         name: "Agrotex",
                         image: "agrotex.png",
-                        link: "https://www.zollner.com/",
+                        link: "https://agrotex.ro/",
                     },
                     {
                         name: "AXA STEEL",
-                        image: "axasteel.jpeg",
-                        link: "https://www.zollner.com/",
+                        image: "axasteel.png",
+                        link: "TODO",
                     },
                     {
                         name: "AXA COMPANY",
-                        image: "axacompany.jpeg",
-                        link: "https://www.zollner.com/",
+                        image: "axacompany.png",
+                        link: "http://axacompany.ro",
+                    },
+                    {
+                        name: "NICOVID",
+                        image: "nicovid.jpg",
+                        link: "https://www.nicovid.ro/",
                     },
                     {
                         name: "Esedra",
                         image: "esedra.png",
-                        link: "https://www.zollner.com/",
+                        link: "http://salaevenimentesm.ro/",
                     },
                 ]
             },
-            /*{
+            {
                 name: "Argint",
                 sponsors: [
-                    /!*{
-                        name: "Zollner",
-                        image: "a",
-                        link: "https://www.zollner.com/",
-                    },*!/
+                    {
+                        name: "TODO",
+                        image: "TODO",
+                        link: "TODO",
+                    },
                 ]
-            },*/
-           /* {
+            },
+            {
                 name: "Bronz",
                 sponsors: [
-                    /!*{
-                        name: "Zollner",
-                        image: "a",
-                        link: "https://www.zollner.com/",
-                    },*!/
+                    {
+                        name: "Hotel Aurora",
+                        image: "hotelaurora.png",
+                        link: "https://aurora-sm.ro/",
+                    },
+                    {
+                        name: "AlfaVega",
+                        image: "alfavega.png",
+                        link: "https://www.alfavega.ro/",
+                    },
+                    {
+                        name: "Sabados Vet",
+                        image: "sabadosvet.jpeg",
+                        link: "https://www.sabadosvet.ro/",
+                    },
                 ]
-            }*/
+            }
         ]
     },
     {

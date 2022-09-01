@@ -35,7 +35,7 @@ export default function Sponsors() {
                 <NavLink to="/sponsori/2017-2018" className={"sponsors-link"}
                          style={({isActive}) => isActive ? activeStyle : undefined}>2017-2018</NavLink>
             </nav>
-            <div>
+            <div className={"sponsor-info"}>
                 <Outlet/>
             </div>
         </div>
