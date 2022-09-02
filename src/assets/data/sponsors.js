@@ -44,13 +44,7 @@ const sponsors = [
             },
             {
                 name: "Argint",
-                sponsors: [
-                    {
-                        name: "TODO",
-                        image: "TODO",
-                        link: "TODO",
-                    },
-                ]
+                sponsors: []
             },
             {
                 name: "Bronz",

@@ -43,7 +43,7 @@
 }
 
 .sponsors-link {
-    text-wrap: none;
+    word-wrap: normal;
     text-decoration: none;
     color: #212121;
     margin: 10px 5px;
@@ -55,4 +55,17 @@
 
 .sponsors-separator {
     margin: 10px 5px;
+    border-right: solid 4px RGB(169, 204, 141);
+}
+
+@media only screen and (max-width: 945px) {
+    .sponsors-page {
+        min-width: 90vw;
+    }
+}
+
+@media only screen and (max-width: 945px) {
+    .sponsors-link {
+        font-size: 3.5vw;
+    }
 }

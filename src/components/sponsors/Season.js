@@ -17,17 +17,18 @@ export default function Season() {
 
     return (
         <div className={"sponsors-list"}>
-            {season.type && season.type.map(type => <SponsorType key={type.name} type={type.name} sponsors={type.sponsors} season={season.season}/>)}
+            {season.type && season.type.map(type => <SponsorType key={type.name} type={type.name}
+                                                                 sponsors={type.sponsors} season={season.season}/>)}
         </div>
     )
 }
 
 function SponsorType({type, sponsors, season}) {
     return (
-        <>
+        sponsors && sponsors.length > 0 && <>
             <h2>Sponsori de {type}</h2>
             <div className={"logo-section"}>
-                {sponsors && sponsors.map(sponsor => <Sponsor key={sponsor.name} season={season} {...sponsor}/>)}
+                {sponsors.map(sponsor => <Sponsor key={sponsor.name} season={season} {...sponsor}/>)}
             </div>
         </>
     )
@@ -35,7 +36,7 @@ function SponsorType({type, sponsors, season}) {
 
 function Sponsor(props) {
     return (
-        <div className={"sponsor"}>
+        <div>
             <img src={`/images/sponsors/${props.season}/${props.image}`} alt={props.name} className={"sponsors-logo"}/>
         </div>
     )
