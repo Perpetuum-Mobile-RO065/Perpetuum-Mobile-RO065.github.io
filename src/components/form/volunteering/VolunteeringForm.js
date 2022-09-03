@@ -57,55 +57,54 @@ export default function VolunteeringForm() {
                 }
                 }>
             {({isSubmitting,}) => <Form className={"volunteer-form"}>
-                <div>
-                    <TextInput label="Nume complet" name="name" type="text" placeholder="Nume Prenume"
-                               inputClass={"volunteer-input-box"} labelClass={"volunteer-input-label"}/>
-                    <TextInput label="Email" name="email" type="email" placeholder="email@example.com"
-                               inputClass={"volunteer-input-box"} labelClass={"volunteer-input-label"}/>
-                    <TextInput label="Număr de telefon" name="phone" type="tel" placeholder=""
-                               inputClass={"volunteer-input-box"} labelClass={"volunteer-input-label"}/>
+                <TextInput label="Nume complet" name="name" type="text" placeholder="Nume Prenume"
+                           inputClass={"volunteer-input-box"} labelClass={"volunteer-input-label"}/>
+                <TextInput label="Email" name="email" type="email" placeholder="email@example.com"
+                           inputClass={"volunteer-input-box"} labelClass={"volunteer-input-label"}/>
+                <TextInput label="Număr de telefon" name="phone" type="tel" placeholder=""
+                           inputClass={"volunteer-input-box"} labelClass={"volunteer-input-label"}/>
 
-                    <Select label={"Școală"} labelClass={"volunteer-input-label"} selectClass={"volunteer-input-box volunteer-dropdown"} name={"school"}>
-                        <option value="" disabled={true}>Școala la care înveți</option>
-                        {schools.map((school, index) => <option key={index} value={school.name}>{school.name}</option>)}
-                    </Select>
+                <Select label={"Școală"} labelClass={"volunteer-input-label"}
+                        selectClass={"volunteer-input-box volunteer-dropdown"} name={"school"}>
+                    <option value="" disabled={true}>Școala la care înveți</option>
+                    {schools.map((school, index) => <option key={index} value={school.name}>{school.name}</option>)}
+                </Select>
 
-                    <TextInput label="Discord" name="discord" type="text" placeholder="Nume#1234"
-                               inputClass={"volunteer-input-box"} labelClass={"volunteer-input-label"}/>
+                <TextInput label="Discord" name="discord" type="text" placeholder="Nume#1234"
+                           inputClass={"volunteer-input-box"} labelClass={"volunteer-input-label"}/>
 
-                    <div className={"multiple-choice-section"}>
-                        <div className={"multiple-choice"}>
-                            <p className="volunteer-margin-5px">Rol</p>
-                            <Radio type="radio" label="Membru" value="Membru" name="role"
-                                   labelClass="multiple-choice-option"/>
-                            <Radio type="radio" label="Voluntar" value="Voluntar" name="role"
-                                   labelClass="multiple-choice-option"/>
-                        </div>
-
-                        <div className={"multiple-choice"}>
-                            <p className="volunteer-margin-5px">Departament</p>
-                            <Radio type="radio" label="Programare" value="Programare" name="department"
-                                   labelClass="multiple-choice-option"/>
-                            <Radio type="radio" label="Proiectare 3D & Design" value="Proiectare 3D & Design"
-                                   name="department" labelClass="multiple-choice-option"/>
-                            <Radio type="radio" label="Mecanică" value="Mecanică" name="department"
-                                   labelClass="multiple-choice-option"/>
-                            <Radio type="radio" label="Public Relations" value="Public Relations" name="department"
-                                   labelClass="multiple-choice-option"/>
-                        </div>
+                <div className={"multiple-choice-section"}>
+                    <div className={"multiple-choice"}>
+                        <p className="volunteer-radio-title">Rol</p>
+                        <Radio type="radio" label="Membru" value="Membru" name="role"
+                               labelClass="multiple-choice-option"/>
+                        <Radio type="radio" label="Voluntar" value="Voluntar" name="role"
+                               labelClass="multiple-choice-option"/>
                     </div>
 
-                    <TextArea label="Hobby-uri" name="hobbies" placeholder="În timpul liber îmi place să..."
-                              inputClass={"volunteer-message volunteer-input-box"}
-                              labelClass={"volunteer-input-label"}/>
-                    <TextArea label="Rezultate obținute" name="qualifications"
-                              placeholder="Ce lucruri despre tine ne-ar putea impresiona?"
-                              inputClass={"volunteer-message volunteer-input-box"}
-                              labelClass={"volunteer-input-label"}/>
-                    <TextArea label="Mesaj opțional" name="message" placeholder="Mai ai ceva ce ai dori să ne spui?"
-                              inputClass={"volunteer-message volunteer-input-box"}
-                              labelClass={"volunteer-input-label"}/>
+                    <div className={"multiple-choice"}>
+                        <p className="volunteer-radio-title">Departament</p>
+                        <Radio type="radio" label="Programare" value="Programare" name="department"
+                               labelClass="multiple-choice-option"/>
+                        <Radio type="radio" label="Proiectare 3D & Design" value="Proiectare 3D & Design"
+                               name="department" labelClass="multiple-choice-option"/>
+                        <Radio type="radio" label="Mecanică" value="Mecanică" name="department"
+                               labelClass="multiple-choice-option"/>
+                        <Radio type="radio" label="Public Relations" value="Public Relations" name="department"
+                               labelClass="multiple-choice-option"/>
+                    </div>
                 </div>
+
+                <TextArea label="Hobby-uri" name="hobbies" placeholder="În timpul liber îmi place să..."
+                          inputClass={"volunteer-message volunteer-input-box"}
+                          labelClass={"volunteer-input-label"}/>
+                <TextArea label="Rezultate obținute" name="qualifications"
+                          placeholder="Ce lucruri despre tine ne-ar putea impresiona?"
+                          inputClass={"volunteer-message volunteer-input-box"}
+                          labelClass={"volunteer-input-label"}/>
+                <TextArea label="Mesaj opțional" name="message" placeholder="Mai ai ceva ce ai dori să ne spui?"
+                          inputClass={"volunteer-message volunteer-input-box"}
+                          labelClass={"volunteer-input-label"}/>
                 <div className={"volunteer-two-buttons"}>
                     <ReCAPTCHA sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY} onChange={handleCaptchaChange}/>
                     <button type="submit" disabled={isSubmitting || !captcha}

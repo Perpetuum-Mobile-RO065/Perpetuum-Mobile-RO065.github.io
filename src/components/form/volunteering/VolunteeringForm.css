@@ -1,5 +1,5 @@
 .volunteer-form-template {
-    width: 60%;
+    width: 60vw;
     margin: 4rem auto;
     vertical-align: center;
     background: rgba(100, 164, 70, 0.75);
@@ -12,11 +12,11 @@
 }
 
 .volunteer-form {
-    margin: 2rem;
+    width: 50%;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    width: 125%;
+    flex-wrap: nowrap;
 }
 
 .volunteer-divider {
@@ -26,6 +26,10 @@
     width: available;
     margin: 0;
     border-radius: 5px;
+}
+
+.volunteer-radio-title {
+    color: #212121;
 }
 
 .volunteer-margin-5px {
@@ -38,12 +42,14 @@
     margin: 2rem;
     display: flex;
     flex-direction: column;
+    width: 40%;
 }
 
 .volunteer-maps-link {
     color: rgb(169, 204, 141);
     text-decoration: none;
     margin: 0 0 0 5px;
+    width: 100%;
 }
 
 .volunteer-maps-link:hover {
@@ -51,9 +57,8 @@
 }
 
 .volunteer-email_icon {
-    width: 6%;
-    height: 6%;
-    margin: 6px 8px 0 0;
+    width: 3vh;
+    height: 3vh;
     padding: 0;
     float: left;
 }
@@ -62,18 +67,20 @@
     display: flex;
     margin: 0;
     padding: 0;
+    align-items: center;
 }
 
 .volunteer-location_icon {
-    width: 5.5%;
-    height: 5.5%;
-    margin: 11px 8px 0 0;
+    width: 4vh;
+    height: 4vh;
     padding: 0;
     float: left;
 }
 
-.volunteer-address-location {
-    margin: 35% 0;
+.volunteer-form_text {
+    margin: auto 0;
+    height: fit-content;
+    word-wrap: normal;
 }
 
 .volunteer-two-buttons {
@@ -121,7 +128,6 @@
     border: 2px solid rgb(33, 33, 33);
     border-radius: 5px;
 
-    width: 100%;
     padding: 12px 15px;
     margin: 8px 0;
     display: inline-block;
@@ -143,11 +149,19 @@
 .volunteer-input-label {
     font-weight: bold;
     color: #222222;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    width: 100%;
 }
 
 .volunteer-email {
     text-decoration: none;
-    color: rgb(33, 33, 33);
+    margin: 5px;
+    word-wrap: normal;
+    width: 100%;
+    color: #212121;
 }
 
 .volunteer-email:hover {
@@ -180,4 +194,33 @@
     color: #212121;
     margin: 0.3rem 0;
     font-weight: normal;
+}
+
+
+@media only screen and (max-width: 1115px) {
+    .volunteer-form-template {
+        min-width: 90vw;
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .volunteer-form {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .volunteer-form-template {
+        flex-direction: column;
+    }
+
+    .volunteer-contact-info {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .multiple-choice-section {
+        flex-direction: column;
+    }
 }
