@@ -1,18 +1,18 @@
 import React, {useEffect} from "react";
 import {NavLink, Outlet, useLocation, useNavigate} from "react-router-dom";
 import './Sponsors.css';
+import sponsors from "../../assets/data/sponsors";
 
 export default function Sponsors() {
-    const activeStyle = {
-        color: 'rgb(169, 204, 141)',
-        textDecoration: 'underline',
-    };
     const navigate = useNavigate();
     const location = useLocation();
 
+    const sponsorSeasons = sponsors.map(sponsor => sponsor.season);
+    const currentSeason = sponsorSeasons[0];
+
     useEffect(() => {
         if (location.pathname === '/sponsori' || location.pathname === '/sponsori/') {
-            navigate("/sponsori/2021-2022");
+            navigate(`/sponsori/${currentSeason}`);
         }
         // eslint-disable-next-line
     }, [location.pathname]);
@@ -20,24 +20,32 @@ export default function Sponsors() {
     return (
         <div className={"sponsors-page"}>
             <nav className={"sponsors-navigation"}>
-                <NavLink to="/sponsori/2021-2022" className={"sponsors-link"}
-                         style={({isActive}) => isActive ? activeStyle : undefined}>2021-<wbr/>2022</NavLink>
-                <p className={"sponsors-separator"}></p>
-                <NavLink to="/sponsori/2020-2021" className={"sponsors-link"}
-                         style={({isActive}) => isActive ? activeStyle : undefined}>2020-<wbr/>2021</NavLink>
-                <p className={"sponsors-separator"}></p>
-                <NavLink to="/sponsori/2019-2020" className={"sponsors-link"}
-                         style={({isActive}) => isActive ? activeStyle : undefined}>2019-<wbr/>2020</NavLink>
-                <p className={"sponsors-separator"}></p>
-                <NavLink to="/sponsori/2018-2019" className={"sponsors-link"}
-                         style={({isActive}) => isActive ? activeStyle : undefined}>2018-<wbr/>2019</NavLink>
-                <p className={"sponsors-separator"}></p>
-                <NavLink to="/sponsori/2017-2018" className={"sponsors-link"}
-                         style={({isActive}) => isActive ? activeStyle : undefined}>2017-<wbr/>2018</NavLink>
+                {sponsorSeasons.map((season, index) => {
+                    if (index !== sponsorSeasons.length - 1) {
+                        return <>
+                            <SeasonLink key={season} season={season}/>
+                            <p className={"sponsors-separator"}></p>
+                        </>
+                    }
+                    return <SeasonLink key={season} season={season}/>
+                })}
             </nav>
             <div className={"sponsor-info"}>
                 <Outlet/>
             </div>
         </div>
+    )
+}
+
+function SeasonLink({season}) {
+    const activeStyle = {
+        color: 'rgb(169, 204, 141)',
+        textDecoration: 'underline',
+    };
+
+    return (
+        <NavLink style={({isActive}) => isActive ? activeStyle : undefined} className={"sponsors-link"}
+                 to={`/sponsori/${season}`}>{season.slice(0, 5)}<wbr/>{season.slice(5, 9)}
+        </NavLink>
     )
 }
