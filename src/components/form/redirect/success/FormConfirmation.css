@@ -9,6 +9,7 @@
     color: #212121;
     font-family: inherit;
     text-align: center;
+    word-wrap: normal;
 }
 
 .robot-image {
