@@ -1,5 +1,5 @@
-.announcement {
-    width: 60%;
+.page-not-found-section {
+    width: 45%;
     background: rgba(100, 164, 70, 0.75);
     border-radius: 10px;
     border: 10px solid rgba(26, 105, 66, 0.9);
@@ -9,7 +9,8 @@
     flex-direction: row;
     position: relative;
     margin: 0 auto;
-    color: #212121
+    color: #212121;
+    align-items: center;
 }
 
 .info {
@@ -17,13 +18,14 @@
     flex-direction: column;
     justify-content: center;
     margin: 10px 30px 10px 10px;
-    width: 110vh;
+    width: 30vw;
 }
 
 .sad-robot-image {
     margin: 10px 0 10px 20px;
     padding: 0;
-    height: 50vh;
+    height: 53vh;
+    width: auto;
 }
 
 .back-to-home-link {
@@ -40,13 +42,36 @@
     text-decoration: none;
     color: RGB(169, 204, 141);
     width: fit-content;
+    text-align: center;
 }
 
-.back-to-home-link:hover{
+.back-to-home-link:hover {
     border-color: RGB(26, 105, 66);
     background-color: RGB(169, 204, 141);
-    color:RGB(26, 105, 66);
+    color: RGB(26, 105, 66);
     -webkit-transition: border-color, color, background-position 200ms ease;
     -moz-transition: border-color, color, background-position 200ms ease;
     -o-transition: border-color, color, background-position 200ms ease;
+}
+
+@media only screen and (max-width: 1090px) {
+    .page-not-found-section {
+        min-width: 90vw;
+        justify-content: center
+    }
+
+    .info {
+        width: 50vw
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .page-not-found-section {
+        flex-direction: column-reverse
+    }
+
+    .info {
+        width: 75vw;
+        margin: 0 auto
+    }
 }
