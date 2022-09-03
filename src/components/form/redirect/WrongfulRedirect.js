@@ -9,6 +9,7 @@ export default function WrongfulRedirect() {
         <div className={"wrongful-section"}>
             <h2 className={"wrongful-message"}>HEY! Ai intrat pe această pagină din greșeală.</h2>
             <img alt="" src="/images/robots/map-robot.png" className={"wrongful-robot-image"}/>
+            <h2 className="wrongful-message">Poate voiai să ajungi aici:</h2>
             <Link to={'../'} className={"back-button"}>{buttonText}</Link>
         </div>
     )
