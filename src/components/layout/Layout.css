@@ -3,21 +3,20 @@
     flex-direction: row;
     background: rgb(100, 164, 70);
     font-size: 1.5em;
-    /*padding: 5px 40px 5px 5px;*/
     margin: 0;
-    color: rgb(2, 8, 5);
+    color: rgb(33, 33, 33);
     border-bottom: solid 0.6vh rgb(26, 105, 66);
     justify-content: space-between;
     font-family: 'Trispace', sans-serif;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     align-items: center;
-    height: 8.8vh;
+    min-height: 8.8vh;
 }
 
 .logo {
     width: 25%;
-    margin-left: 30px;
+    margin-left: 60px;
     cursor: pointer;
     -webkit-filter: drop-shadow(0px 0px 8px #222);
     filter: drop-shadow(0px 0px 8px #222);
@@ -27,14 +26,17 @@
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
+    align-items: center;
 }
 
 .navigation--link {
-    text-decoration: none;
     font-weight: bold;
     margin: 10px 30px 10px 10px;
-    color:rgb(33, 33, 33);
     cursor: pointer;
+    color: rgb(33, 33, 33);
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .navigation--link:hover {
@@ -66,8 +68,7 @@
     font-weight: bold;
     color: rgb(33, 33, 33);
     font-family: 'Trispace', sans-serif;
-
-    height: 11.5vh;
+    min-height: 11.5vh;
     width: 100%;
     padding: 1.5vh 0 1.5vh 0;
     border-top-left-radius: 10px;
@@ -77,7 +78,7 @@
 
 .social--links {
     display: inline-block;
-    width: 60rem;
+    width: fit-content;
     text-align: center;
 }
 
@@ -85,43 +86,56 @@
     cursor: pointer;
 }
 
-.icon:hover{
+.icon:hover {
     filter: brightness(0) saturate(100%) invert(28%) sepia(86%) saturate(366%) hue-rotate(98deg) brightness(96%) contrast(93%);
 }
 
 .insta--icon {
-    width: 4%;
+    width: 6vh;
     margin: 0;
     padding: 0;
 }
 
 .dis--icon {
-    width: 5%;
+    width: 6vh;
     margin: 0;
     padding: 0;
 }
 
 .git--icon {
-    width: 4%;
+    width: 6vh;
     margin: 0;
     padding: 0;
 }
 
 .fb--icon {
-    width: 4%;
+    width: 6vh;
     margin: 0;
     padding: 0;
 }
 
-.copyright {
+.printables--icon {
+    width: 6.5vh;
     margin: 0;
     padding: 0;
+}
+
+.mail--icon {
+    margin: 0;
+    padding: 0;
+    width: 6.5vh;
+}
+
+.copyright {
+    margin: 0 10px;
+    padding: 0;
+    text-align: center;
 }
 
 .social--link {
     padding: 0;
-    margin: 0 5vh 0 5vh;
-    color:transparent;
+    margin: 0 3vw;
+    color: transparent;
 }
 
 .main-body {
@@ -132,14 +146,47 @@
     justify-content: center;
 }
 
-.printables--icon{
-    margin:0;
-    padding: 0;
-    width: 4.5%;
+.hamburger-menu {
+    z-index: 1;
+    width: 30px;
+    align-self: center;
+    position: absolute;
+    right: 20px;
+    display: none;
 }
 
-.mail--icon{
-    margin:0;
-    padding: 0;
-    width: 4%;
+@media only screen and (max-width: 1230px) {
+    .navigation--link {
+        font-size: 2vw;
+        margin: 10px 20px;
+    }
+
+    .logo {
+        margin-left: 5vw;
+    }
+
+    .navigation--links {
+        width: 80vw;
+    }
+}
+
+@media only screen and (max-width: 975px) {
+    .navigation--link {
+        font-size: 2.5vw;
+        margin: 10px
+    }
+
+    .logo {
+        width: 12vw;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    .navigation--links {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: inline-block;
+    }
 }

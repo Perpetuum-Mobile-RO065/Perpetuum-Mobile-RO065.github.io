@@ -9,10 +9,15 @@ export default function Layout() {
         textShadow: "-1.5px 1.5px 0 rgb(26, 105, 66), 1.5px 1.5px 0 rgb(26, 105, 66), 1.5px -1.5px 0 rgb(26, 105, 66), -1.5px -1.5px 0 rgb(26, 105, 66)",
     }
 
+    const logoStyle = {
+        filter: "drop-shadow(0px 0px 8p #222)",
+        WebkitFilter: "drop-shadow(0px 0px 8px #222)",
+    }
+
     return (
         <>
             <nav className="navigation--bar">
-                <div className="logo">
+                <div style={logoStyle}>
                     <NavLink to={"/"} end><img src="/logo.png" alt="Perpetuum Mobile Logo" className="logo"/></NavLink>
                 </div>
                 <div className="navigation--links">
@@ -27,6 +32,7 @@ export default function Layout() {
                     <NavLink to={"/contact"} className="navigation--link"
                              style={({isActive}) => isActive ? activeStyle : undefined}>Contact</NavLink>
                 </div>
+                <img className={"hamburger-menu"} alt={""} src={"/icons/menu-icon.png"}/>
             </nav>
             <div className="main-body">
                 <Outlet/>
