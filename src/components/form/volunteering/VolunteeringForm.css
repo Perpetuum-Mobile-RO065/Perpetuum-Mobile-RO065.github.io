@@ -58,7 +58,7 @@
 
 .volunteer-email_icon {
     width: 3vh;
-    height: 3vh;
+    height: auto;
     padding: 0;
     float: left;
 }
@@ -71,8 +71,8 @@
 }
 
 .volunteer-location_icon {
-    width: 4vh;
-    height: 4vh;
+    width: 3vh;
+    height: auto;
     padding: 0;
     float: left;
 }
