@@ -9,10 +9,12 @@ import "./VolunteeringForm.css";
 import Radio from "../fields/selectors/Radio";
 import Select from "../fields/selectors/Select";
 import schools from "../../../assets/data/schools";
+import useWindowDimensions from "../../../hooks/window/useWindowDimensions";
 
 export default function VolunteeringForm() {
     const [captcha, setCaptcha] = useState(false);
     const email = useEmail(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID_VOLUNTEER, process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
+    const [width] = useWindowDimensions();
 
     const handleCaptchaChange = (value) => {
         if (value === null) {
@@ -105,8 +107,8 @@ export default function VolunteeringForm() {
                 <TextArea label="Mesaj opțional" name="message" placeholder="Mai ai ceva ce ai dori să ne spui?"
                           inputClass={"volunteer-message volunteer-input-box"}
                           labelClass={"volunteer-input-label"}/>
-                <div className={"volunteer-two-buttons"}>
-                    <ReCAPTCHA sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY} onChange={handleCaptchaChange}/>
+                <div className={"volunteer-send"}>
+                    <ReCAPTCHA sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY} onChange={handleCaptchaChange} size={width <= 400 ? "compact" : "normal"}/>
                     <button type="submit" disabled={isSubmitting || !captcha}
                             className={"volunteer-submit"}>{isSubmitting ? "Se trimite..." : "Trimite"}</button>
                 </div>

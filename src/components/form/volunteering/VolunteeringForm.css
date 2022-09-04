@@ -83,9 +83,12 @@
     word-wrap: normal;
 }
 
-.volunteer-two-buttons {
+.volunteer-send {
     display: flex;
     margin: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .volunteer-submit {
@@ -98,7 +101,7 @@
     height: fit-content;
     border: 2px solid RGB(169, 204, 141);;
     padding: 0.6rem;
-    margin: auto;
+    margin: 10px auto 0 auto;
     cursor: pointer;
 }
 
