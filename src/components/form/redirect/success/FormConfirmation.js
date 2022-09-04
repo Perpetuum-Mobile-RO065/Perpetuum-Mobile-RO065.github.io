@@ -9,7 +9,7 @@ export default function FormConfirmation() {
 
     if (state === null) return <WrongfulRedirect/>;
 
-    let email = <>{[...state.email].map(char => {
+    const email = <>{[...state.email].map(char => {
         if (char === "@" || char === "_" || char === "-" || char === ".") {
             return (
                 <>{char}
