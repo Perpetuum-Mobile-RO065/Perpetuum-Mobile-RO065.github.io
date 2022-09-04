@@ -11,11 +11,12 @@
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     align-items: center;
-    min-height: 8.8vh;
+    height: 8.8vh;
 }
 
 .logo {
-    width: 25%;
+    height: 8vh;
+    width: auto;
     margin-left: 60px;
     cursor: pointer;
     -webkit-filter: drop-shadow(0px 0px 8px #222);
@@ -147,11 +148,73 @@
 }
 
 .hamburger-menu {
-    z-index: 1;
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+.hamburger-icon {
     width: 30px;
     align-self: center;
     position: absolute;
     right: 20px;
+    display: none;
+}
+
+.hamburger-navigation-links {
+    display: flex;
+    flex-direction: column;
+    z-index: 4;
+    position: absolute;
+    right: 16%;
+    top: 13%;
+    background: RGBA(175, 175, 175, 0.5);
+    border-radius: 100%;
+    box-shadow: 0 0 5px 10px RGBA(175, 175, 175, 0.5);
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburger-navigation-link {
+    font-weight: bold;
+    cursor: pointer;
+    color: rgb(33, 33, 33);
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    padding: 14px 10px 10px 10px;
+    margin: 0;
+    font-size: 25px;
+    width: fit-content;
+    word-wrap: normal;
+}
+
+.hamburger-close-button {
+    z-index: 5;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 30px 34px 0 0;
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: Arial, serif;
+    cursor: pointer;
+}
+
+.background-blur {
+    height: 100%;
+    width: 100%;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    backdrop-filter: blur(4px);
+    position: absolute;
+    background: RGBA(255, 255, 255, 0.1);
     display: none;
 }
 
@@ -186,7 +249,28 @@
         display: none;
     }
 
-    .hamburger-menu {
-        display: inline-block;
+    .hamburger-icon {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    .hamburger-menu > img {
+        width: 90vw;
+    }
+
+    .hamburger-close-button {
+        margin: 6vw 7vw 0 0;
+        font-size: 8vw;
+    }
+
+    .hamburger-navigation-links {
+        right: 16vw;
+        top: 13vw;
+    }
+
+    .hamburger-navigation-link {
+        font-size: 5.5vw;
+        padding: 3.5vw 2vw 2vw 2vw;
     }
 }
