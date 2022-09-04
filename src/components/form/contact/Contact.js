@@ -24,8 +24,8 @@ export default function Contact() {
                     <div className="contact-email_section">
                         <img alt="" className="contact-email_icon"
                              src="/icons/form-icon-email.png"/>
-                        <a className="contact-margin-5px contact-email"
-                           href={"mailto:perpetuum.mobile@eminescusm.ro"}>perpetuum.mobile@eminescusm.ro</a>
+                        <a className="contact-email"
+                           href={"mailto:perpetuum.mobile@eminescusm.ro"}>perpetuum.<wbr/>mobile@<wbr/>eminescusm.<wbr/>ro</a>
                     </div>
                     <br/><br/>
                     <p className="contact-margin-5px">Nu sunteți siguri de locație? </p>
