@@ -225,7 +225,7 @@
     }
 
     .logo {
-        margin-left: 5vw;
+        margin-left: 4.5vw;
     }
 
     .navigation--links {
@@ -237,10 +237,6 @@
     .navigation--link {
         font-size: 2.5vw;
         margin: 10px
-    }
-
-    .logo {
-        width: 12vw;
     }
 }
 

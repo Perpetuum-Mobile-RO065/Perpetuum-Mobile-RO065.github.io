@@ -1,7 +1,7 @@
 {
   "name": "perpetuum-mobile-website",
   "version": "0.1.0",
-  "homepage": "https://perpetuum-mobile-ro065.github.io",
+  "homepage": "https://pm.eminescusm.ro",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.6.2",
