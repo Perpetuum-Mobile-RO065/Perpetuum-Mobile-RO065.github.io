@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import {NavLink, Outlet, useLocation, useNavigate} from "react-router-dom";
-import './Sponsors.css';
+import styles from './Sponsors.module.css';
 import sponsors from "../../assets/data/sponsors";
 
 export default function Sponsors() {
@@ -18,19 +18,19 @@ export default function Sponsors() {
     }, [location.pathname]);
 
     return (
-        <div className={"sponsors-page"}>
-            <nav className={"sponsors-navigation"}>
+        <div className={styles.sponsorsPage}>
+            <nav className={styles.navigationBar}>
                 {sponsorSeasons.map((season, index) => {
                     if (index !== sponsorSeasons.length - 1) {
                         return <>
                             <SeasonLink key={season} season={season}/>
-                            <p className={"sponsors-separator"}></p>
+                            <p className={styles.separator}></p>
                         </>
                     }
                     return <SeasonLink key={season} season={season}/>
                 })}
             </nav>
-            <div className={"sponsor-info"}>
+            <div className={styles.sponsorInfo}>
                 <Outlet/>
             </div>
         </div>
@@ -44,7 +44,7 @@ function SeasonLink({season}) {
     };
 
     return (
-        <NavLink style={({isActive}) => isActive ? activeStyle : undefined} className={"sponsors-link"}
+        <NavLink style={({isActive}) => isActive ? activeStyle : undefined} className={styles.navigationLink}
                  to={`/sponsori/${season}`}>{season.slice(0, 5)}<wbr/>{season.slice(5, 9)}
         </NavLink>
     )

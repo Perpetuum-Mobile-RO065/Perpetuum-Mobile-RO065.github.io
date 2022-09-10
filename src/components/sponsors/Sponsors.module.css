@@ -1,4 +1,4 @@
-.sponsors-page {
+.sponsorsPage {
     width: 60vw;
     background: rgba(100, 164, 70, 0.75);
     border-radius: 10px;
@@ -13,7 +13,7 @@
     justify-content: center;
 }
 
-.sponsor-info {
+.sponsorInfo {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,7 +21,7 @@
     width: available;
 }
 
-.sponsors-navigation {
+.navigationBar {
     border-radius: 15px;
     background-color: rgb(26, 105, 66);
     font-family: inherit;
@@ -42,30 +42,30 @@
     justify-content: space-around;
 }
 
-.sponsors-link {
+.navigationLink {
     word-wrap: normal;
     text-decoration: none;
     color: #212121;
     margin: 10px 5px;
 }
 
-.sponsors-link:hover {
+.navigationLink:hover {
     text-decoration: underline;
 }
 
-.sponsors-separator {
+.separator {
     margin: 10px 5px;
     border-right: solid 4px RGB(169, 204, 141);
 }
 
 @media only screen and (max-width: 945px) {
-    .sponsors-page {
+    .sponsorsPage {
         min-width: 90vw;
     }
 }
 
 @media only screen and (max-width: 945px) {
-    .sponsors-link {
+    .navigationLink {
         font-size: 3.5vw;
     }
 }

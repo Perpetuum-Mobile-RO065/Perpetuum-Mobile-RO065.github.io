@@ -1,14 +1,14 @@
-.sponsors-list {
+.sponsorsList {
     margin: 10px;
 }
 
-.logo-section {
+.logoSection {
     display: inline-flex;
     margin: 0 auto;
     flex-wrap: wrap;
 }
 
-.sponsors-logo {
+.sponsorsLogo {
     display: block;
     height: 15vh;
     width: auto;
@@ -19,7 +19,7 @@
 }
 
 @media only screen and (max-width: 420px) {
-    .sponsors-logo {
+    .sponsorsLogo {
         width: 75vw;
         height: auto
     }
