@@ -9,6 +9,9 @@ const schools = [
         name: "Colegiul Național \"Mihai Eminescu\" Satu Mare",
     },
     {
+        name: "Colegiul Național \"Ioan Slavici\" Satu Mare",
+    },
+    {
         name: "Liceul Teoretic Ortodox \"Nicolae Steinhardt\" Satu Mare",
     },
     {
