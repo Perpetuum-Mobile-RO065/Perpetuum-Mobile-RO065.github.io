@@ -1,6 +1,6 @@
 import React from "react";
 import {useLocation} from "react-router-dom";
-import './FormConfirmation.css';
+import styles from './FormConfirmation.module.css';
 import WrongfulRedirect from "../WrongfulRedirect";
 
 export default function FormConfirmation() {
@@ -21,10 +21,10 @@ export default function FormConfirmation() {
     })}</>;
 
     return (
-        <div className="success-section">
-            <h2 className="success-message">YAY! Mesajul a fost trimis cu succes de pe
+        <div className={styles.section}>
+            <h2 className={styles.message}>YAY! Mesajul a fost trimis cu succes de pe
                 adresa {email}.</h2>
-            <img alt="Happy robot cheering" src="/images/robots/happy-robot.png" className={"robot-image"}/>
+            <img alt="Happy robot cheering" src="/images/robots/happy-robot.png" className={styles.robotImage}/>
         </div>
     )
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import {useLocation} from "react-router-dom";
-import './FormFailure.css';
+import styles from './FormFailure.module.css';
 import WrongfulRedirect from "../WrongfulRedirect";
 
 export default function FormFailure() {
@@ -10,10 +10,10 @@ export default function FormFailure() {
     }
     return (
         state === null ? <WrongfulRedirect/> :
-            <div className="form-failure">
-                <h2 className="fail-message">HMMM... Ceva a mers prost și formularul nu a putut fi trimis...</h2>
-                <img src="/images/robots/gear-robot.png" alt={"Robot holding a gear"} className={"fail-robot-image"}/>
-                <h2 className="success-message">Te rugăm să ne contactezi manual pe adresa de email.</h2>
+            <div className={styles.section}>
+                <h2 className={styles.message}>HMMM... Ceva a mers prost și formularul nu a putut fi trimis...</h2>
+                <img src="/images/robots/gear-robot.png" alt={"Robot holding a gear"} className={styles.robotImage}/>
+                <h2 className={styles.message}>Te rugăm să ne contactezi manual pe adresa de email.</h2>
             </div>
     )
 

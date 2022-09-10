@@ -1,10 +1,10 @@
-.wrongful-message {
+.message {
     color: #212121;
     font-family: inherit;
     text-align: center;
 }
 
-.wrongful-robot-image {
+.robotImage {
     margin: 0 auto;
     padding: 0;
     display: block;
@@ -14,7 +14,7 @@
     height: auto;
 }
 
-.back-button {
+.backButton {
     border-radius: 15px;
     background-color: rgb(26, 105, 66);
     font-family: inherit;
@@ -30,7 +30,7 @@
     width: fit-content;
 }
 
-.back-button:hover {
+.backButton:hover {
     border-color: RGB(26, 105, 66);
     background-color: RGB(169, 204, 141);
     color: RGB(26, 105, 66);
@@ -39,7 +39,7 @@
     -o-transition: border-color, color, background-position 200ms ease;
 }
 
-.wrongful-section {
+.section {
     margin: 2rem;
     display: flex;
     flex-direction: column;
@@ -48,7 +48,7 @@
 }
 
 @media only screen and (max-width: 735px) {
-    .wrongful-section {
+    .section {
         margin: 2rem auto;
         width: 80vw;
     }

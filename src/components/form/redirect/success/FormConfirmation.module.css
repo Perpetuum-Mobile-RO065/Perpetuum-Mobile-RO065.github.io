@@ -1,0 +1,22 @@
+.section {
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.message {
+    composes: message from '../WrongfulRedirect.module.css';
+    word-wrap: normal;
+}
+
+.robotImage {
+    composes: robotImage from "../WrongfulRedirect.module.css";
+}
+
+@media only screen and (max-width: 735px) {
+    .section {
+        margin: 2rem auto;
+        width: 80vw;
+    }
+}
