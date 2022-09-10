@@ -1,4 +1,4 @@
-.under-construction-section {
+.underConstructionSection {
     width: 45%;
     background: rgba(100, 164, 70, 0.75);
     border-radius: 10px;
@@ -13,14 +13,14 @@
     align-items: center;
 }
 
-.working-robot-image {
+.robotImage {
     margin: 10px 0 10px 20px;
     padding: 0;
     height: 53vh;
     width: auto;
 }
 
-.under-construction-info {
+.infoSection {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,7 +28,7 @@
     width: 30vw;
 }
 
-.under-construction-link {
+.homeButton {
     border-radius: 15px;
     background-color: rgb(26, 105, 66);
     font-family: inherit;
@@ -45,7 +45,7 @@
     text-align: center;
 }
 
-.under-construction-link:hover {
+.homeButton:hover {
     border-color: RGB(26, 105, 66);
     background-color: RGB(169, 204, 141);
     color: RGB(26, 105, 66);
@@ -55,22 +55,22 @@
 }
 
 @media only screen and (max-width: 1090px) {
-    .under-construction-section {
+    .underConstructionSection {
         min-width: 90vw;
-        justify-content: center
+        justify-content: center;
     }
 
-    .under-construction-info {
-        width: 50vw
+    .infoSection {
+        width: 50vw;
     }
 }
 
 @media only screen and (max-width: 535px) {
-    .under-construction-section {
-        flex-direction: column-reverse
+    .underConstructionSection {
+        flex-direction: column-reverse;
     }
 
-    .under-construction-info {
-        width: 75vw
+    .infoSection {
+        width: 75vw;
     }
 }

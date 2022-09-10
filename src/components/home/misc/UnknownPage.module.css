@@ -1,0 +1,37 @@
+.pageNotFoundSection {
+    composes: underConstructionSection from './UnderConstruction.module.css';
+}
+
+.infoSection {
+    composes: infoSection from './UnderConstruction.module.css';
+}
+
+.robotImage {
+    composes: robotImage from './UnderConstruction.module.css';
+}
+
+.homeButton {
+    composes: homeButton from './UnderConstruction.module.css';
+}
+
+@media only screen and (max-width: 1090px) {
+    .pageNotFoundSection {
+        min-width: 90vw;
+        justify-content: center;
+    }
+
+    .infoSection {
+        width: 50vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .pageNotFoundSection {
+        flex-direction: column-reverse;
+    }
+
+    .infoSection {
+        width: 75vw;
+        margin: 0 auto;
+    }
+}

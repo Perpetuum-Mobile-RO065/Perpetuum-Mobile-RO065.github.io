@@ -8,7 +8,7 @@ import Sponsors from "../sponsors/Sponsors";
 import VolunteeringForm from "../form/volunteering/VolunteeringForm";
 import ContactForm from "../form/contact/ContactForm";
 import FormFailure from "../form/redirect/error/FormFailure";
-import UnknownPage from "../home/UnknownPage";
+import UnknownPage from "../home/misc/UnknownPage";
 import Contact from "../form/contact/Contact";
 import Volunteer from "../form/volunteering/Volunteer";
 import Season from "../sponsors/Season";
