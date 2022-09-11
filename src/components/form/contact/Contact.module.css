@@ -1,0 +1,106 @@
+.formTemplate {
+    width: 60vw;
+    margin: 0 auto;
+    vertical-align: center;
+    background: rgba(100, 164, 70, 0.75);
+    border-radius: 10px;
+    border: 10px solid rgba(26, 105, 66, 0.9);
+    font-family: 'Trispace', sans-serif;
+    display: flex;
+    height: fit-content;
+    font-weight: bold;
+}
+
+.contactInfo {
+    color: rgb(33, 33, 33);
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.divider {
+    height: 5px;
+    border: 0;
+    background-color: rgba(169, 204, 141, 0.7);
+    width: available;
+    margin: 0;
+    border-radius: 5px;
+}
+
+.formText {
+    margin: auto 0;
+    height: fit-content;
+    word-wrap: normal;
+}
+
+.margin5px {
+    margin: 5px;
+}
+
+.color212121 {
+    color: #212121;
+}
+
+.info {
+    composes: color212121;
+    composes: margin5px;
+}
+
+.addressSection {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.icon {
+    width: 3vh;
+    height: auto;
+    padding: 0;
+    float: left;
+}
+
+.emailLink:hover {
+    text-decoration: underline;
+}
+
+.emailLink {
+    margin: 5px;
+    word-wrap: normal;
+    text-decoration: none;
+    color: rgb(33, 33, 33);
+    width: 100%;
+}
+
+.emailLink:visited {
+    color: inherit;
+}
+
+.mapsLink {
+    color: rgba(169, 204, 141);
+    text-decoration: none;
+    margin: 0 0 0 5px;
+    width: 100%;
+}
+
+.mapsLink:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 1115px) {
+    .formTemplate {
+        min-width: 90vw;
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .formTemplate {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contactInfo {
+        width: 85%;
+    }
+}

@@ -1,0 +1,102 @@
+.form {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 50%;
+}
+
+.confirmSection {
+    display: flex;
+    margin: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.submitButton {
+    border-radius: 15px;
+    background-color: rgb(26, 105, 66);
+    color: rgb(169, 204, 141);;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: 1.5em;
+    height: fit-content;
+    border: 2px solid rgb(169, 204, 141);
+    padding: 0.6rem;
+    margin: 10px auto 0 auto;
+    cursor: pointer;
+}
+
+.submitButton:hover {
+    border-color: RGB(26, 105, 66);
+    background-color: RGB(169, 204, 141);
+    color: RGB(26, 105, 66);
+
+    -webkit-transition: border-color, color, background-position 200ms ease;
+    -moz-transition: border-color, color, background-position 200ms ease;
+    -o-transition: border-color, color, background-position 200ms ease;
+}
+
+.submitButton:disabled {
+    opacity: 75%;
+    pointer-events: none;
+}
+
+.inputBox {
+    background: rgb(169, 204, 141);
+    border: 2px solid rgb(33, 33, 33);
+    border-radius: 5px;
+    padding: 12px 15px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    color: rgb(33, 33, 33);
+    font-family: 'Trispace', sans-serif;
+    font-size: 0.9em;
+    overflow-x: hidden;
+}
+
+.inputBox::placeholder {
+    color: rgba(26, 105, 66, 0.9);
+    opacity: 1; /* Firefox */
+}
+
+.inputBox:-ms-input-placeholder {
+    color: rgba(26, 105, 66, 0.9);
+}
+
+.inputBox::-ms-input-placeholder {
+    color: rgba(26, 105, 66, 0.9);
+}
+
+.inputLabel {
+    font-weight: bold;
+    color: #222222;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    width: 100%;
+}
+
+.inputBox:focus {
+    outline: none !important;
+    box-shadow: -2px 2px 0 rgb(26, 105, 66),
+    2px 2px 0 rgb(26, 105, 66),
+    2px -2px 0 rgb(26, 105, 66),
+    -2px -2px 0 rgb(26, 105, 66);
+}
+
+.textareaBox {
+    composes: inputBox;
+    height: 9rem;
+    word-wrap: normal;
+    resize: none;
+}
+
+@media only screen and (max-width: 735px) {
+    .form {
+        width: 85%;
+    }
+}
