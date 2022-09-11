@@ -5,7 +5,7 @@ import {Form, Formik} from "formik";
 import ReCAPTCHA from "react-google-recaptcha";
 import TextInput from "../fields/text/TextInput";
 import TextArea from "../fields/text/TextArea";
-import "./VolunteeringForm.css";
+import styles from "./VolunteeringForm.module.css";
 import Radio from "../fields/selectors/Radio";
 import Select from "../fields/selectors/Select";
 import schools from "../../../assets/data/schools";
@@ -58,59 +58,59 @@ export default function VolunteeringForm() {
                     email(values);
                 }
                 }>
-            {({isSubmitting,}) => <Form className={"volunteer-form"}>
+            {({isSubmitting,}) => <Form className={styles.form}>
                 <TextInput label="Nume complet" name="name" type="text" placeholder="Nume Prenume"
-                           inputClass={"volunteer-input-box"} labelClass={"volunteer-input-label"}/>
+                           inputClass={styles.inputBox} labelClass={styles.inputLabel}/>
                 <TextInput label="Email" name="email" type="email" placeholder="email@example.com"
-                           inputClass={"volunteer-input-box"} labelClass={"volunteer-input-label"}/>
+                           inputClass={styles.inputBox} labelClass={styles.inputLabel}/>
                 <TextInput label="Număr de telefon" name="phone" type="tel" placeholder=""
-                           inputClass={"volunteer-input-box"} labelClass={"volunteer-input-label"}/>
+                           inputClass={styles.inputBox} labelClass={styles.inputLabel}/>
 
-                <Select label={"Școală"} labelClass={"volunteer-input-label"}
-                        selectClass={"volunteer-input-box volunteer-dropdown"} name={"school"}>
+                <Select label={"Școală"} labelClass={styles.inputLabel}
+                        selectClass={styles.dropDown} name={"school"}>
                     <option value="" disabled={true}>Școala la care înveți</option>
                     {schools.map((school, index) => <option key={index} value={school.name}>{school.name}</option>)}
                 </Select>
 
                 <TextInput label="Discord" name="discord" type="text" placeholder="Nume#1234"
-                           inputClass={"volunteer-input-box"} labelClass={"volunteer-input-label"}/>
+                           inputClass={styles.inputBox} labelClass={styles.inputLabel}/>
 
-                <div className={"multiple-choice-section"}>
-                    <div className={"multiple-choice"}>
-                        <p className="volunteer-radio-title">Rol</p>
+                <div className={styles.radioChoiceSection}>
+                    <div className={styles.radioChoice}>
+                        <p className={styles.radioTitle}>Rol</p>
                         <Radio type="radio" label="Membru" value="Membru" name="role"
-                               labelClass="multiple-choice-option"/>
+                               labelClass={styles.radioOption}/>
                         <Radio type="radio" label="Voluntar" value="Voluntar" name="role"
-                               labelClass="multiple-choice-option"/>
+                               labelClass={styles.radioOption}/>
                     </div>
 
-                    <div className={"multiple-choice"}>
-                        <p className="volunteer-radio-title">Departament</p>
+                    <div className={styles.radioChoice}>
+                        <p className={styles.radioTitle}>Departament</p>
                         <Radio type="radio" label="Programare" value="Programare" name="department"
-                               labelClass="multiple-choice-option"/>
+                               labelClass={styles.radioOption}/>
                         <Radio type="radio" label="Proiectare 3D & Design" value="Proiectare 3D & Design"
-                               name="department" labelClass="multiple-choice-option"/>
+                               name="department" labelClass={styles.radioOption}/>
                         <Radio type="radio" label="Mecanică" value="Mecanică" name="department"
-                               labelClass="multiple-choice-option"/>
+                               labelClass={styles.radioOption}/>
                         <Radio type="radio" label="Public Relations" value="Public Relations" name="department"
-                               labelClass="multiple-choice-option"/>
+                               labelClass={styles.radioOption}/>
                     </div>
                 </div>
 
                 <TextArea label="Hobby-uri" name="hobbies" placeholder="În timpul liber îmi place să..."
-                          inputClass={"volunteer-message volunteer-input-box"}
-                          labelClass={"volunteer-input-label"}/>
+                          inputClass={styles.textareaBox}
+                          labelClass={styles.inputLabel}/>
                 <TextArea label="Rezultate obținute" name="qualifications"
                           placeholder="Ce lucruri despre tine ne-ar putea impresiona?"
-                          inputClass={"volunteer-message volunteer-input-box"}
-                          labelClass={"volunteer-input-label"}/>
+                          inputClass={styles.textareaBox}
+                          labelClass={styles.inputLabel}/>
                 <TextArea label="Mesaj opțional" name="message" placeholder="Mai ai ceva ce ai dori să ne spui?"
-                          inputClass={"volunteer-message volunteer-input-box"}
-                          labelClass={"volunteer-input-label"}/>
-                <div className={"volunteer-send"}>
+                          inputClass={styles.textareaBox}
+                          labelClass={styles.inputLabel}/>
+                <div className={styles.confirmSection}>
                     <ReCAPTCHA sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY} onChange={handleCaptchaChange} size={width <= 400 ? "compact" : "normal"}/>
                     <button type="submit" disabled={isSubmitting || !captcha}
-                            className={"volunteer-submit"}>{isSubmitting ? "Se trimite..." : "Trimite"}</button>
+                            className={styles.submitButton}>{isSubmitting ? "Se trimite..." : "Trimite"}</button>
                 </div>
             </Form>}
         </Formik>)

@@ -1,0 +1,58 @@
+.form {
+    composes: form from '../contact/ContactForm.module.css';
+}
+
+.radioTitle {
+    color: #212121;
+}
+
+.confirmSection {
+    composes: confirmSection from '../contact/ContactForm.module.css';
+}
+
+.submitButton {
+    composes: submitButton from '../contact/ContactForm.module.css';
+}
+
+.textareaBox {
+    composes: textareaBox from '../contact/ContactForm.module.css';
+}
+
+.inputBox {
+    composes: inputBox from '../contact/ContactForm.module.css';
+}
+
+.inputLabel {
+    composes: inputLabel from '../contact/ContactForm.module.css';
+}
+
+.radioChoiceSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 1rem 0;
+}
+
+.radioChoice {
+    display: flex;
+    flex-direction: column;
+}
+
+.radioOption {
+    color: #212121;
+    margin: 0.3rem 0;
+    font-weight: normal;
+}
+
+.dropDown {
+    composes: inputBox;
+    color: #212121;
+    margin: 0.3rem 0;
+    font-weight: normal;
+}
+
+@media only screen and (max-width: 420px) {
+    .radioChoiceSection {
+        flex-direction: column;
+    }
+}
