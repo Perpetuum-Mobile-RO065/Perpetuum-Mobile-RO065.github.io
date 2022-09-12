@@ -3,7 +3,7 @@ import useEmail from "../../../hooks/email/useEmail";
 import {Form, Formik} from "formik";
 import * as Yup from "yup";
 import ReCAPTCHA from "react-google-recaptcha";
-import styles from "./ContactForm.module.css";
+import formStyles from '../Form.module.css';
 import TextInput from "../fields/text/TextInput";
 import TextArea from "../fields/text/TextArea";
 import useWindowDimensions from "../../../hooks/window/useWindowDimensions";
@@ -35,22 +35,22 @@ export default function ContactForm() {
         <Formik initialValues={{userName: "", email: "", message: "", title: ""}} validationSchema={formSchema}
                 onSubmit={values => email(values)}>
             {({isSubmitting}) =>
-                <Form className={styles.form}>
+                <Form className={formStyles.form}>
                     <TextInput label="Nume complet" name="userName" type="text" placeholder="Nume Prenume"
-                               labelClass={styles.inputLabel} inputClass={styles.inputBox}/>
+                               labelClass={formStyles.inputLabel} inputClass={formStyles.inputBox}/>
                     <TextInput label="Email" name="email" type="text" placeholder="email@example.com"
-                               labelClass={styles.inputLabel} inputClass={styles.inputBox}/>
+                               labelClass={formStyles.inputLabel} inputClass={formStyles.inputBox}/>
                     <TextInput label="Titlu" name="title" type="text" placeholder="Titlul mesajului"
-                               labelClass={styles.inputLabel} inputClass={styles.inputBox}/>
+                               labelClass={formStyles.inputLabel} inputClass={formStyles.inputBox}/>
                     <TextArea label="Mesaj" name="message" type="text"
                               placeholder="Bună ziua! Vă contactez în legătură cu..."
-                              labelClass={styles.inputLabel}
-                              inputClass={styles.textareaBox}/>
-                    <div className={styles.confirmSection}>
+                              labelClass={formStyles.inputLabel}
+                              inputClass={formStyles.textareaBox}/>
+                    <div className={formStyles.confirmSection}>
                         <ReCAPTCHA sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
                                    onChange={handleCaptchaChange} size={width <= 400 ? "compact" : "normal"}/>
                         <button type="submit" disabled={(isSubmitting || !captcha)}
-                                className={styles.submitButton}>{isSubmitting ? "Se trimite..." : "Trimite"}
+                                className={formStyles.submitButton}>{isSubmitting ? "Se trimite..." : "Trimite"}
                         </button>
                     </div>
                 </Form>}

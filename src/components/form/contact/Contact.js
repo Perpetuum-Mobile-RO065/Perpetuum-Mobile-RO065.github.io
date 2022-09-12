@@ -1,6 +1,6 @@
 import React from "react";
 import {Outlet} from "react-router-dom";
-import styles from "./Contact.module.css";
+import styles from "../FormPage.module.css";
 
 export default function Contact() {
     return (

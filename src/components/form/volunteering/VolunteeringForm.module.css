@@ -1,29 +1,5 @@
-.form {
-    composes: form from '../contact/ContactForm.module.css';
-}
-
 .radioTitle {
     color: #212121;
-}
-
-.confirmSection {
-    composes: confirmSection from '../contact/ContactForm.module.css';
-}
-
-.submitButton {
-    composes: submitButton from '../contact/ContactForm.module.css';
-}
-
-.textareaBox {
-    composes: textareaBox from '../contact/ContactForm.module.css';
-}
-
-.inputBox {
-    composes: inputBox from '../contact/ContactForm.module.css';
-}
-
-.inputLabel {
-    composes: inputLabel from '../contact/ContactForm.module.css';
 }
 
 .radioChoiceSection {
@@ -45,7 +21,7 @@
 }
 
 .dropDown {
-    composes: inputBox;
+    composes: inputBox from '../Form.module.css';
     color: #212121;
     margin: 0.3rem 0;
     font-weight: normal;

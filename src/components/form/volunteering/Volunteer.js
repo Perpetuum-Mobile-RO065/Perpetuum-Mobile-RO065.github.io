@@ -1,6 +1,6 @@
 import React from "react";
 import {Outlet} from "react-router-dom";
-import styles from "./Volunteer.module.css";
+import styles from "../FormPage.module.css";
 
 export default function Volunteer() {
     return (
